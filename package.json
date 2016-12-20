@@ -1,14 +1,41 @@
 {
   "name": "portfolio",
-  "version": "0.0.0",
-  "description": "Small description for portfolio goes here",
+  "description": "Hub and home of Lone-DO, Porfolio Site wiht all my creations and more",
+  "version": "1.0.0",
+  "private": true,
   "license": "MIT",
-  "author": "",
+  "author": "lone-do",
   "directories": {
     "doc": "doc",
     "test": "tests"
   },
-  "repository": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Lone-DO/lone-do.github.io.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Lone-DO/lone-do.github.io/issues"
+  },
+  "homepage": "https://github.com/Lone-DO/lone-do.github.io#readme",
+  "keywords": [
+	 "lone-do",
+	 "lone",
+	 "scholar",
+	 "Undertale",
+    "Animal",
+    "Crossing",
+    "AnimalCrossing",
+    "Nintendo",
+    "Clock",
+    "OST"
+  ],
+  "dependencies": {
+    "ember-cli-bootstrap-sassy": "0.5.5",
+    "ember-cli-sass": "5.6.0",
+    "body-parser": "1.6.3",
+    "express": "4.x",
+    "mongojs": "~0.9.10"
+  },
   "scripts": {
     "build": "ember build",
     "start": "ember server",
@@ -35,10 +62,10 @@
     "ember-load-initializers": "^0.5.1",
     "ember-resolver": "^2.0.3",
     "ember-welcome-page": "^1.0.3",
-    "loader.js": "^4.0.10"
+    "loader.js": "^4.0.10",
+	 "morgan": "^1.7.0"
   },
   "engines": {
     "node": ">= 0.12.0"
-  },
-  "private": true
+  }
 }
