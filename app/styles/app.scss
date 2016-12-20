@@ -1,1 +1,118 @@
-@import "ac-app";
+//@import "ac-app";
+
+$Gap: 20px;
+$Max: 100%;
+
+* {
+	box-sizing: border-box;
+	padding: 0;
+	list-style: none;
+}
+
+/***************************
+	 			Main
+****************************/
+
+html {
+	background: #000000;
+}
+
+#page {
+	width: 80%;
+}
+
+body {
+	color: #ffffff;
+}
+
+img[src*="icon"] {
+		width: 42px;
+		opacity: .75;
+	}
+
+img[src*="icon"]:hover {
+		width: 60px;
+		opacity: 1.0;
+	}
+
+/***************************
+          Flex-box
+****************************/
+
+.wrapper {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;  
+  
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
+  
+  font-weight: bold;
+  text-align: center;
+}
+
+.wrapper > * {
+  padding: 10px;
+  flex: 1 $Max;
+}
+
+.main {
+  text-align: left;
+}
+
+.aside {
+	width: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+	
+	background-color: #222;
+	border-radius: 10%;
+	border-style: outset;
+}
+
+
+
+/***************************
+  Header/ Siderbar / Footer
+****************************/
+
+header {
+	width: $Max;
+	height: $Max;
+}
+
+.Banner {
+	max-width: 20rem;
+	max-height: $Max;
+	width: 80%;
+//	margin-top: $Gap;
+}
+
+.Banner[src*="geek"] {
+	margin-bottom: -60px;
+	}
+
+footer {
+	margin-top: $Gap;
+}
+
+/***************************
+	 		Media Queries
+****************************/
+
+@media all and (min-width: 600px) {
+  .aside { flex: 1 auto; }
+}
+
+@media all and (min-width: 800px) {
+  .main { 
+	  padding-left: $Gap;
+	  flex: 9 0px;
+	}
+  .aside { order: 1; } 
+  .main { order: 2; }
+  footer { order: 3; }
+}

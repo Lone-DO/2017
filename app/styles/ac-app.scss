@@ -8,7 +8,6 @@ $Round: 50px;
 $Gap: 20px;
 
 * {
-	color: #784011;
 	box-sizing: border-box;
 	padding: 0;
 	list-style: none;
@@ -31,6 +30,10 @@ footer {
 /***************************
 	 		Main
 ****************************/
+
+html {
+	color: #784011;
+}
 
 body {
 	text-align: center;
