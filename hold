@@ -1,0 +1,37 @@
+<aside class="aside">
+			<li class="navhome">
+				{{#link-to 'index'}}
+				<span>Home</span>
+				<img src="../assets/images/home_icon.png">
+				{{/link-to}}
+				</li>
+			<!--HomeScreen-->
+			<li>
+				{{#link-to 'projects'}}
+				<span>Projects</span>
+				<img src="../assets/images/bgCtroller_icon.png">
+				{{/link-to}}
+				</li>
+			<!--Projects-->
+			<li>
+				{{#link-to 'animalCrossing'}}
+				<span>Animal Crossing Clock</span>
+				<img src="../assets/images/leaf_icon.png">
+				{{/link-to}}
+				</li>
+			<!--Animal Crossing-->
+			<li>
+				{{#link-to 'undertale'}}
+				<span>Undertale</span>
+				<img src="../assets/images/heart_icon.png">
+				{{/link-to}}
+				</li>
+			<!--Undertale-->
+			<li>
+				{{#link-to 'legacy'}}
+				<span>Legacy</span>
+				<img src="../assets/images/writer_icon.png">
+				{{/link-to}}
+				</li>
+				<!--Legacy/ Contact Page-->
+			</aside>
