@@ -35,3 +35,13 @@
 				</li>
 				<!--Legacy/ Contact Page-->
 			</aside>
+
+			{{#if Default}}
+				{{render "home"}}
+			{{else if Projects}}
+				{{render "projects"}}
+			{{else if Legacy}}
+				{{render "legacy"}}
+			{{else if Other}}
+				{{outlet}}
+				{{/if}}

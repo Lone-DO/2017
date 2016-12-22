@@ -4,40 +4,46 @@
 			<img class="Banner" src="../assets/images/scholarBanner.jpg">
 			</header>
 		<aside class="aside">
-			<li>
-				<img src="../assets/images/home_icon.png">
-				<span>Home</span>
+			<li {{action "isDef"}}>
+				{{#link-to 'home'}}
+					<img src="../assets/images/home_icon.png">
+					<span>Home</span>
+					{{/link-to}}
 				</li>
 			<!--HomeScreen-->
-			<li>
-				<img src="../assets/images/bgCtroller_icon.png">
-				<span>Projects</span>
+			<li {{action "isProj"}}>
+				{{#link-to 'projects'}}
+					<img src="../assets/images/bgCtroller_icon.png">
+					<span>Projects</span>
+					{{/link-to}}
 				</li>
 			<!--Projects-->
-			<li>
-				<img src="../assets/images/leaf_icon.png">
-				<span>Animal Crossing Clock</span>
+			<li {{action "isOther"}}>
+				{{#link-to 'animalcrossing'}}
+					<img src="../assets/images/leaf_icon.png">
+					<span>Animal Crossing Clock</span>
+					{{/link-to}}
 				</li>
 			<!--Animal Crossing-->
-			<li>
-				<img src="../assets/images/heart_icon.png">
-				<span>Undertale</span>
+			<li {{action "isOther"}}>
+				{{#link-to 'undertale'}}
+					<img src="../assets/images/heart_icon.png">
+					<span>Undertale</span>
+					{{/link-to}}
 				</li>
 			<!--Undertale-->
-			<li>
-				<img src="../assets/images/writer_icon.png">
-				<span>Legacy</span>
+			<li {{action "isLeg"}}>
+				{{#link-to 'legacy'}}
+					<img src="../assets/images/writer_icon.png">
+					<span>Legacy</span>
+					{{/link-to}}
 				</li>
 				<!--Legacy/ Contact Page-->
 			</aside>
 		<article class="main">
-			<p>
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas fermentum ultrices malesuada. Duis fermentum porttitor erat, vitae lobortis libero mattis ac. In hac habitasse platea dictumst. Praesent suscipit gravida lorem, in cursus tellus rutrum ut. Nullam auctor lorem eget interdum lobortis. Ut aliquet interdum nunc a congue. Nullam egestas eget dolor a egestas. Proin elementum interdum posuere. Mauris maximus iaculis dapibus. Fusce elementum, turpis ac ornare mollis, justo ipsum faucibus sem, vel congue risus felis vitae dui. Proin convallis, odio quis rutrum scelerisque, quam leo scelerisque eros, non aliquet risus ligula in metus. Nunc leo neque, rhoncus sit amet vehicula semper, sagittis eu orci. Nullam a bibendum diam. Suspendisse efficitur gravida dui nec dignissim. Vivamus vel porta augue. Nullam at nisl volutpat, imperdiet purus a, imperdiet lorem.
-				</p>
- 			<p>
-				Donec ac vestibulum elit, eu sodales ante. Quisque mollis auctor quam, a volutpat urna dignissim eu. Mauris tempor urna blandit, dictum ligula quis, elementum leo. Proin pretium pharetra diam, at finibus enim cursus sed. Aenean sed ultrices urna, a tempor neque. Sed porta neque a metus imperdiet condimentum. Quisque eleifend semper dapibus. Proin volutpat lacus vel ligula efficitur egestas. Morbi sed felis eu enim sodales luctus vel eget turpis. Vestibulum lobortis ex sit amet rutrum feugiat. Mauris feugiat metus lacus, eget luctus ligula ornare vitae. Sed lectus sem, posuere ut dignissim sed, pharetra eget neque. In semper, justo at ullamcorper fringilla, mauris nibh tincidunt turpis, at mollis orci quam at est. Quisque pulvinar placerat lacus ac dignissim.
-				</p>
+			
 			{{outlet}}
+
   			</article>
 		<footer>
 			<img class="Banner" src="../assets/images/geekBanner.jpg ">

@@ -25,10 +25,11 @@ body {
 	color: #ffffff;
 }
 
-
-
-
 .aside {
+	width: 10%;
+	background-color: #222;
+	border-radius: 20px;
+	border-style: inset;
 	img[src*="icon"] {
 		width: 42px;
 		opacity: .60;
@@ -39,45 +40,69 @@ body {
 		width: 60px;
 		opacity: 1.0;
 	}
+	/*Sets Active Icon to stay Max size**/
+	.active img[src*="icon"] {
+		width: 60px;
+		opacity: 1.0;
+	}
+	.active span {
+		display: block;
+		color: red;
+	}
 }
 
+.showcase {
+	img[src*="Fav"] {
+		width: 42px;
+		height: 42px;
+		margin-right: 20px;
+	}
+	p {
+		text-align: center;
+	}
+}
 
 /***************************
           Flex-box
 ****************************/
 
 .wrapper {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;  
-  
-  -webkit-flex-flow: row wrap;
-  flex-flow: row wrap;
-  
-  font-weight: bold;
-  text-align: center;
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;  
+	-webkit-flex-flow: row wrap;
+	flex-flow: row wrap;
+	font-weight: bold;
+	text-align: center;
+	> * {
+		padding: 10px;
+		flex: 1 $Max;
+	}
 }
 
-.wrapper > * {
-  padding: 10px;
-  flex: 1 $Max;
+.showcase {
+	display: flex;
+	align-items: center;
+	flex-flow: row wrap;
+	> * {flex: 1 $Max;}
+  	img {order: 1; flex: 1 auto;}
+  	h2 {order: 2; flex: 11 auto;}
+  	p {order: 3;}
 }
 
 .main {
-  text-align: left;
+	text-align: left;
 }
 
 .aside {
-	width: 10%;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-around;
-	background-color: #222;
-	border-radius: 20px;
-	border-style: inset;
 }
+
+
 
 /***************************
   Header/ Siderbar / Footer
@@ -92,12 +117,11 @@ header {
 	max-width: 20rem;
 	max-height: $Max;
 	width: 80%;
-//	margin-top: $Gap;
 }
 
 .Banner[src*="geek"] {
 	margin-bottom: -60px;
-	}
+}
 
 footer {
 	margin-top: $Gap;
@@ -107,33 +131,29 @@ footer {
 	 		Media Queries
 ****************************/
 
-@media all and (max-width: 800px) {
+@media all and (min-width: 600px) {
+	.aside { flex: 1 auto; }
+}
+
+@media all and (max-width: 767px) {
 	.aside {
-		li img{
-			display: none;
-		}
+		li img { display: none; }
 	}
 }
 
-@media all and (min-width: 600px) {
-  .aside { flex: 1 auto; }
-}
-
-@media all and (min-width: 800px) {
-  .main { 
-	  padding-left: $Gap;
-	  flex: 9 0px;
+@media all and (min-width: 768px) {
+	.main { 
+		padding-left: $Gap;
+		flex: 9 0px;
 	}
 	.aside { 
 		order: 1;
-		span {
-			display: none;
-		}
+		span { display: none; }
 		img:hover + span {
 			display: block;
 			color: red;
 		}
 	} 
-  .main { order: 2; }
-  footer { order: 3; }
+	.main { order: 2; }
+	footer { order: 3; }
 }
