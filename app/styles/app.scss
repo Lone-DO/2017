@@ -7,14 +7,20 @@ $Max: 100%;
 	box-sizing: border-box;
 	padding: 0;
 	list-style: none;
+	a:link,
+	a:hover,
+	a:active,
+	a:visited {
+		text-decoration: none;
+	}
 }
 
 /***************************
-	 			Main
+	 		Main
 ****************************/
 
 html {
-	background: #000000;
+	background: #000;
 }
 
 #page {
@@ -36,10 +42,13 @@ body {
 		-webkit-transition: width .75s;
 		transition: width .75s;
 	}
-	img[src*="icon"]:hover {
-		width: 60px;
-		opacity: 1.0;
+	li:hover {
+		img[src*="icon"] {
+			width: 60px;
+			opacity: 1.0;
+		}
 	}
+	
 	/*Sets Active Icon to stay Max size**/
 	.active img[src*="icon"] {
 		width: 60px;
@@ -102,8 +111,6 @@ body {
 	justify-content: space-around;
 }
 
-
-
 /***************************
   Header/ Siderbar / Footer
 ****************************/
@@ -128,7 +135,7 @@ footer {
 }
 
 /***************************
-	 		Media Queries
+	 	Media Queries
 ****************************/
 
 @media all and (min-width: 600px) {
@@ -136,6 +143,7 @@ footer {
 }
 
 @media all and (max-width: 767px) {
+	li { height: 36px; }
 	.aside {
 		li img { display: none; }
 	}
@@ -149,9 +157,11 @@ footer {
 	.aside { 
 		order: 1;
 		span { display: none; }
-		img:hover + span {
-			display: block;
-			color: red;
+		li:hover {
+			span {
+				display: block;
+				color: red;
+			}
 		}
 	} 
 	.main { order: 2; }

@@ -3,41 +3,41 @@
 		<header>
 			<img class="Banner" src="../assets/images/scholarBanner.jpg">
 			</header>
-		<aside class="aside">
-			<li {{action "isDef"}}>
-				{{#link-to 'home'}}
+		<aside class="navbar navbar-inverse aside ">
+			{{#link-to 'home'}}
+				<li>
 					<img src="../assets/images/home_icon.png">
 					<span>Home</span>
-					{{/link-to}}
-				</li>
+					</li>
+				{{/link-to}}
 			<!--HomeScreen-->
-			<li {{action "isProj"}}>
-				{{#link-to 'projects'}}
+			{{#link-to 'projects'}}
+				<li>
 					<img src="../assets/images/bgCtroller_icon.png">
 					<span>Projects</span>
-					{{/link-to}}
-				</li>
+					</li>
+				{{/link-to}}
 			<!--Projects-->
-			<li {{action "isOther"}}>
-				{{#link-to 'animalcrossing'}}
+			{{#link-to 'animalcrossing'}}
+				<li>
 					<img src="../assets/images/leaf_icon.png">
 					<span>Animal Crossing Clock</span>
-					{{/link-to}}
-				</li>
+					</li>
+				{{/link-to}}
 			<!--Animal Crossing-->
-			<li {{action "isOther"}}>
-				{{#link-to 'undertale'}}
+			{{#link-to 'undertale'}}
+				<li>
 					<img src="../assets/images/heart_icon.png">
 					<span>Undertale</span>
-					{{/link-to}}
-				</li>
+					</li>
+				{{/link-to}}
 			<!--Undertale-->
-			<li {{action "isLeg"}}>
-				{{#link-to 'legacy'}}
+			{{#link-to 'legacy'}}
+				<li>
 					<img src="../assets/images/writer_icon.png">
 					<span>Legacy</span>
-					{{/link-to}}
-				</li>
+					</li>
+				{{/link-to}}
 				<!--Legacy/ Contact Page-->
 			</aside>
 		<article class="main">
