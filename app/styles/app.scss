@@ -19,15 +19,8 @@ $Max: 100%;
 	 		Main
 ****************************/
 
-html {
-	background: #000;
-}
-
-#page {
-	width: 80%;
-}
-
 body {
+	background: black;
 	color: #ffffff;
 }
 
@@ -36,6 +29,7 @@ body {
 	background-color: #222;
 	border-radius: 20px;
 	border-style: inset;
+	margin: $Gap;
 	img[src*="icon"] {
 		width: 42px;
 		opacity: .60;
@@ -69,6 +63,29 @@ body {
 	p {
 		text-align: center;
 	}
+}
+
+/***************************
+  Header/ Siderbar / Footer
+****************************/
+
+header {
+	width: $Max;
+	height: $Max;
+}
+
+.Banner {
+	max-width: 20rem;
+	max-height: $Max;
+	width: 80%;
+}
+
+.Banner[src*="geek"] {
+	margin-bottom: -30px;
+}
+
+footer {
+	margin-top: $Gap;
 }
 
 /***************************
@@ -109,29 +126,6 @@ body {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-around;
-}
-
-/***************************
-  Header/ Siderbar / Footer
-****************************/
-
-header {
-	width: $Max;
-	height: $Max;
-}
-
-.Banner {
-	max-width: 20rem;
-	max-height: $Max;
-	width: 80%;
-}
-
-.Banner[src*="geek"] {
-	margin-bottom: -60px;
-}
-
-footer {
-	margin-top: $Gap;
 }
 
 /***************************
