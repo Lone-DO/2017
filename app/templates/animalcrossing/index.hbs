@@ -1,0 +1,45 @@
+<p>testing, this is the animal crossing template holder</p>
+
+
+<header>
+    <img id="banner" src="../assets/images/AC_App/Animal_Crossing_Logo.png">
+</header>
+<body>
+    <div class="container">    
+        <div id="app">
+            {{#if isStarted}}
+                {{partial 'clock'}}
+            {{else}}    
+                <div id="start">
+                    <a {{action 'start'}}>
+                        <img 
+                             src="../assets/images/AC_App/kk_button_tumblr.png"  
+                             onmouseover="this.src='../assets/images/AC_App/kk_button_tumblr.gif';"
+                             onmouseout="this.src='../assets/images/AC_App/kk_button_tumblr.png';">
+                        </a>
+                    </div>
+                {{/if}}
+            </div> <!--End of AC App Div-->
+        <div>
+            <div>{{outlet}}</div>
+            {{#if hintShowing}}
+                <button {{action 'hideHint'}} class="cancel-button">X</button>
+                {{partial 'guide'}}
+                {{/if}}
+            </div><!--End of AC Outlet Div-->
+        </div><!--End of container Div-->
+</body>
+
+<footer>
+    <div id="time"></div>
+    <nav>
+        <li>
+            {{#link-to 'animalcrossing.gen'}}
+                <button class="col-xs-6 btn btn-default">Generations</button>
+            {{/link-to}}
+            </li>
+        <li {{action 'showHint'}}>
+            <button class="col-xs-6 btn btn-default">Help!!</button>
+            </li>
+    </nav>
+</footer>
