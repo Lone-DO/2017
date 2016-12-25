@@ -8,7 +8,7 @@
     <div class="container">    
         <div id="app">
             {{#if isStarted}}
-                {{partial 'clock'}}
+                {{partial 'animalcrossing/clock'}}
             {{else}}    
                 <div id="start">
                     <a {{action 'start'}}>
@@ -24,7 +24,7 @@
             <div>{{outlet}}</div>
             {{#if hintShowing}}
                 <button {{action 'hideHint'}} class="cancel-button">X</button>
-                {{partial 'guide'}}
+                {{partial 'animalcrossing/guide'}}
                 {{/if}}
             </div><!--End of AC Outlet Div-->
         </div><!--End of container Div-->
