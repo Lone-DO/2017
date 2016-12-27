@@ -1,11 +1,8 @@
-<p>testing, this is the animal crossing template holder</p>
-
-
-<header>
+<div class="header">
     <img id="banner" src="../assets/images/AC_App/Animal_Crossing_Logo.png">
-</header>
-<body>
-    <div class="container">    
+</div>
+<div id="AC_App">
+    <div class="">    
         <div id="app">
             {{#if isStarted}}
                 {{partial 'animalcrossing/clock'}}
@@ -28,18 +25,18 @@
                 {{/if}}
             </div><!--End of AC Outlet Div-->
         </div><!--End of container Div-->
-</body>
+</div>
 
-<footer>
+<div class="footer">
     <div id="time"></div>
     <nav>
         <li>
             {{#link-to 'animalcrossing.gen'}}
-                <button class="col-xs-6 btn btn-default">Generations</button>
+                <button {{action 'end'}} class="col-xs-6 btn btn-default">Generations</button>
             {{/link-to}}
             </li>
         <li {{action 'showHint'}}>
             <button class="col-xs-6 btn btn-default">Help!!</button>
             </li>
     </nav>
-</footer>
+</div>

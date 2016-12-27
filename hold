@@ -1,47 +1,28 @@
-<aside class="aside">
-			<li class="navhome">
-				{{#link-to 'index'}}
-				<span>Home</span>
-				<img src="../assets/images/home_icon.png">
-				{{/link-to}}
-				</li>
-			<!--HomeScreen-->
-			<li>
-				{{#link-to 'projects'}}
-				<span>Projects</span>
-				<img src="../assets/images/bgCtroller_icon.png">
-				{{/link-to}}
-				</li>
-			<!--Projects-->
-			<li>
-				{{#link-to 'animalCrossing'}}
-				<span>Animal Crossing Clock</span>
-				<img src="../assets/images/leaf_icon.png">
-				{{/link-to}}
-				</li>
-			<!--Animal Crossing-->
-			<li>
-				{{#link-to 'undertale'}}
-				<span>Undertale</span>
-				<img src="../assets/images/heart_icon.png">
-				{{/link-to}}
-				</li>
-			<!--Undertale-->
-			<li>
-				{{#link-to 'legacy'}}
-				<span>Legacy</span>
-				<img src="../assets/images/writer_icon.png">
-				{{/link-to}}
-				</li>
-				<!--Legacy/ Contact Page-->
-			</aside>
+import Ember from 'ember';
+import config from './config/environment';
 
-			{{#if Default}}
-				{{render "home"}}
-			{{else if Projects}}
-				{{render "projects"}}
-			{{else if Legacy}}
-				{{render "legacy"}}
-			{{else if Other}}
-				{{outlet}}
-				{{/if}}
+const Router = Ember.Router.extend({
+	location: config.locationType,
+	rootURL: config.rootURL
+});
+
+Router.map(function() {
+	this.route('home', {path: '/'});
+	this.route('projects', {path: '/projects'});
+
+	this.route('animalcrossing', {path: '/actunes'}, function() {
+		this.route('guide');
+		this.route('clock');
+	    this.route('gen', {path: '/gen'}, function() {
+	        this.route('create');
+	    });
+	});
+
+	this.route('undertale', {path: '/undertale'}, function() {
+  	
+  	});
+
+  	this.route('legacy', {path: '/legacy'});
+});
+
+export default Router;

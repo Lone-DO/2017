@@ -154,7 +154,7 @@ export default Ember.Controller.extend({
 									_currentGen = _nlID;
 									play();
 									banner.src = 
-										("../../../assets/images/Animal_Crossing_New_Leaf_logo.png");
+										("../../../assets/images/AC_App/Animal_Crossing_New_Leaf_logo.png");
 								});
 								/**Plays CityFolk**/
 								$('.set1').click(function (){
@@ -162,14 +162,14 @@ export default Ember.Controller.extend({
 									_currentGen = _cfID;
 									play();
 									banner.src = 
-										("../../../assets/images/Animal_Crossing-_City_Folk_(logo).png");
+										("../../../assets/images/AC_App/Animal_Crossing-_City_Folk_(logo).png");
 								});
 								/**Plays Original**/
 								$('.set0').click(function (){
 									pending = _currentGen;
 									_currentGen = _oID;
 									play();
-									banner.src ("../../../assets/images/Animal_Crossing_Logo.png");
+									banner.src ("../../../assets/images/AC_App/Animal_Crossing_Logo.png");
 								});
 
 							//Updating Seconds
