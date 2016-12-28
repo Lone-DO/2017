@@ -1,17 +1,16 @@
 <div class="mailbox">
-  <h5>Inbox</h5>
-
-  <ul>
-	{{#each}}
-	  <li>
-		{{#link-to 'mail' this.id}}@{{user}} Says: {{text}}{{/link-to}}
-	</li>
-	{{/each}}
-  </ul>
-
-  <div id="mails">{{outlet}}</div>
-
-  <p>
-	{{#link-to 'new-mail' classNames="btn btn-primary ctrl"}}New Mail{{/link-to}}
-  </p>
-</div>
+	<h5>Inbox</h5>
+	<ul>
+		{{#each}}
+			<li>
+				{{#link-to 'undertale.mail' this.id}}@{{user}} Says: {{text}}
+					{{/link-to}}
+				</li>
+			{{/each}}
+  		</ul>
+  	<div id="mails">{{outlet}}</div>
+  	<p>
+		{{#link-to 'undertale.new-mail' classNames="btn btn-primary ctrl"}}New Mail
+			{{/link-to}}
+  		</p>
+	</div>

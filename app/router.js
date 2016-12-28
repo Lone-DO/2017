@@ -24,7 +24,7 @@ Router.map(function() {
     });
 
     this.route('undertale', {path: '/undertale'}, function() {
-    	this.route('hub', {path: '/'},
+    	this.route('hub', {path: '/'}),
 		this.route('troubleshoot');
 		this.route('faq');
 		this.route('about');

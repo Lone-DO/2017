@@ -1,7 +1,9 @@
 <form {{action 'save' on='submit'}}>
 	<div class="form-group">
-    	<label for="text">Your Thoughts:</label>
-    	{{textarea value=text id="text" class="form-control" rows='3' maxlength="75" required="required"}}
+		<label for="text">Your Thoughts:</label>
+    	{{textarea value=text id="text" class="form-control" rows='3' 
+    		maxlength="75" required="required"}}
   		</div>
-    {{input id="save" class="btn btn-primary ctrl" type="submit" value="Post Reply"}}
+    {{input id="save" class="btn btn-primary ctrl" type="submit" 
+    	value="Post Reply"}}
 	</form>
