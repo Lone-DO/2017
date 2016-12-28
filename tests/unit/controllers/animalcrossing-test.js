@@ -1,6 +1,6 @@
 import { moduleFor, test } from 'ember-qunit';
 
-moduleFor('controller:animalcrossing/index', 'Unit | Controller | animalcrossing/index', {
+moduleFor('controller:animalcrossing', 'Unit | Controller | animalcrossing', {
   // Specify the other units that are required for this test.
   // needs: ['controller:foo']
 });

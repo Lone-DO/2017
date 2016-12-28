@@ -1,0 +1,54 @@
+{{#if isEditing}}
+	<form {{action 'save' on='submit'}}>
+
+		<div class="form-group">
+			<label for="user">Nickname: {{user}}</label>
+			{{input id="user" class="form-control" value=user 
+					placeholder="Sir Pin Head" maxlength="25" required="required"}}
+			<span>Keep Name at least 3 characters long</span>
+		</div>
+		
+		<div class="form-group">
+			<label for="text">
+				Leave mail for the Devs and Designers to see:
+			</label>
+			{{textarea id="text" class="form-control" value=text rows='4'
+					placeholder="Oh Hi There, This is random text to let you know what you Shouldn't do ;D" maxlength="200" required="required"}}
+			<span>Keep Text at least 10 characters long</span>
+		</div>
+		
+		{{input id="save" class="btn btn-primary ctrl" type="submit" value="Save mail :D"}}
+	</form>
+
+{{else}}
+
+	<h3>@{{user}}: Says " {{text}} "</h3>
+	<div class="controls">
+		<button class="btn btn-primary ctrl" {{action 'edit'}}>
+				Edit Note</button>
+		<button class="btn btn-primary ctrl" {{action 'delete'}}>
+				delete</button>
+	</div>
+{{/if}}
+
+<div class="controls">
+{{#if repliesAreShowing}}
+	<button class="btn btn-info ctrl" {{action 'hideReplies'}}>
+		Hide Comments!</button>
+
+
+	<div class="replyBox">
+		{{#each replies}}
+			<p>{{text}}</p>
+		{{/each}}
+		
+	</div>
+	<p>
+		{{#link-to 'new-reply' this.id class="btn btn-default ctrl"}}Reply{{/link-to}}
+	</p>
+	{{outlet}}
+	
+{{else}}
+	<button class="btn btn-info ctrl" {{action 'showReplies'}}>Show Replies</button>
+{{/if}}
+</div>

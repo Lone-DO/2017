@@ -17,10 +17,10 @@ export default Ember.Controller.extend({
 	actions: {
 		isStarted: false, //defaults app to not started
 		hintShowing: false, //defaults guide to not show
+	//Onclick of Launch img, Fire application
 		end: function () {
             this.set('isStarted', false);
         },
-	//Onclick of Launch img, Fire application
 		start: function () {
 			'use strict';
 			this.set('isStarted', true);
@@ -216,11 +216,5 @@ export default Ember.Controller.extend({
 			// *****API Rendering*****
 			}); //End of Strict Script
 		},
-		showHint: function () {
-            this.set('hintShowing', true);
-        },
-        hideHint: function () {
-            this.set('hintShowing', false);
-        }
     }
 });

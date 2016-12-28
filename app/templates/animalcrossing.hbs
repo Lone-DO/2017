@@ -2,21 +2,8 @@
     <img id="banner" src="../assets/images/AC_App/Animal_Crossing_Logo.png">
 </div>
 <div id="AC_App">
-    <div class="">    
-        <div id="app">
-            {{#if isStarted}}
-                {{partial 'animalcrossing/clock'}}
-            {{else}}    
-                <div id="start">
-                    <a {{action 'start'}}>
-                        <img 
-                             src="../assets/images/AC_App/kk_button_tumblr.png"  
-                             onmouseover="this.src='../assets/images/AC_App/kk_button_tumblr.gif';"
-                             onmouseout="this.src='../assets/images/AC_App/kk_button_tumblr.png';">
-                        </a>
-                    </div>
-                {{/if}}
-            </div> <!--End of AC App Div-->
+    <div>    
+        {{render "animalcrossing/app"}}
         <div>
             <div>{{outlet}}</div>
             {{#if hintShowing}}

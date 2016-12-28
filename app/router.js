@@ -1,4 +1,4 @@
- import Ember from 'ember';
+import Ember from 'ember';
 import config from './config/environment';
 
 const Router = Ember.Router.extend({
@@ -11,21 +11,26 @@ Router.map(function() {
     this.route('projects', {path: '/projects'});
 
     this.route('animalcrossing', {path: '/actunes'}, function() {
-        this.route('guide');
-        this.route('clock');
-        this.route('gen', {path: '/gen'}, function() {
-            this.route('create');
-        });
+        
+    	// put your routes here
+	    this.route('app', function() {
+	        this.route('guide');
+	        this.route('clock');
+	    });//default
+        
+    	this.route('gen', {path: '/gen'}, function() {
+        	this.route('create');
+    	});
     });
 
     this.route('undertale', {path: '/undertale'}, function() {
+    	this.route('hub', {path: '/'},
 		this.route('troubleshoot');
 		this.route('faq');
 		this.route('about');
 		this.route('demo');
 		this.route('merch');
 		this.route('contact');
-		//  New Site Features
 		//Fanmail Interface
 		this.route('mailbox', function () {
 			this.route('mail', {path: 'mails/:mail_id'}, function () {

@@ -8,9 +8,13 @@ let App;
 Ember.MODEL_FACTORY_INJECTIONS = true;
 
 App = Ember.Application.extend({
-  modulePrefix: config.modulePrefix,
-  podModulePrefix: config.podModulePrefix,
-  Resolver
+ 	modulePrefix: config.modulePrefix,
+  	podModulePrefix: config.podModulePrefix,
+  	Resolver
+});
+
+Ember.TextSupport.reopen({
+  	attributeBindings: ['required']
 });
 
 loadInitializers(App, config.modulePrefix);

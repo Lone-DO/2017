@@ -1,0 +1,60 @@
+<div class="undertale">
+		<div class="header">
+			{{#link-to 'undertale'}}
+				<img id="logo" src="../assets/images/Undertale_App/undertale_logo.png">
+				{{/link-to}}
+			<nav class="navbar navbar-inverse mymenu" role="navigation">
+			<ul class="nav navbar-nav">
+				<li ><!--  ABOUT -->
+					{{#link-to 'undertale.about'}}ABOUT{{/link-to}}
+					</li> 
+				<li><!--  DEMO  -->
+					{{#link-to 'undertale.demo'}}DEMO{{/link-to}}
+					</li>
+				<li id="nav_merch"><!--  External Merch  -->
+					<a href="http://www.fangamer.com/collections/undertale">
+						MERCH<br>
+						<span>new!</span>
+						</a>
+					</li>
+				<li><!--  CONTACT -->
+					{{#link-to 'undertale.contact'}}CONTACT{{/link-to}}
+					</li>
+				<li><!--  FAQ -->
+					{{#link-to 'undertale.faq'}}FAQ!{{/link-to}}
+					</li>
+				<li class="mail"><!--  Fan Page  -->
+					{{#link-to 'undertale.mailbox'}}<img src="../assets/images/Undertale_App/mail-closed.ico">{{/link-to}}
+					</li>
+				<li><!--  Gallery Page  -->
+					{{#link-to 'undertale.gallery'}}Gallery{{/link-to}}
+					</li>
+				<li><!--  Musicbox Page -->
+					{{#link-to 'undertale.musicbox'}}♫Musicbox♫{{/link-to}}
+					</li>
+				</ul>
+			</nav>
+		</div><!--Top of Site-->
+	<div>{{outlet}}</div>
+  <div class="footer">
+		<nav>
+			<ul>
+					<li><!-- TROUBLESHOOTING -->
+						{{#link-to 'undertale.troubleshoot'}}
+							<img src="../assets/images/Undertale_App/troubleshoot.png">
+							{{/link-to}}
+						</li>
+				<li>
+					<a href="http://twitter.com/undertale">
+					<img src="../assets/images/Undertale_App/twitterbutton.png"></a>
+
+					<a href="http://undertale.tumblr.com/">
+					<img src="../assets/images/Undertale_App/tumblrbutton.png"></a>
+
+					<a href="http://store.steampowered.com/app/391540">
+					<img src="../assets/images/Undertale_App/steambutton.png"></a>
+					</li>
+				</ul>
+			</nav>
+	</div><!--End of Footer-->
+</div><!--  Bottom of Site  -->

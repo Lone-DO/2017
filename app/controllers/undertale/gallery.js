@@ -6,57 +6,57 @@ export default Ember.Controller.extend({
 //Undertale.GalleryController = Em.Controller.extend({});
 $(document).ready(function () {
 	'use strict';
-  
   	//FLICKR API CALLS
 	$('#showFlickr').click(function () {
     	// AJAX
 		var flickerAPI = "http://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?",
-      opts = {
-        	tags: 'undertale',
+      	opts = {
+			tags: 'undertale',
         	format: "json"
-      };
+      	};
     	function displayPhotos(data) {
-	      var photoHTML = '<ul>';
+	      	var photoHTML = '<ul>';
 			$.each(data.items, function (i, photo) {
 				photoHTML += '<li>' + '<a href="' + photo.link + '">';
 	        	photoHTML += '<img src="' + photo.media.m + '"></a></li>';
-	      });
-	      photoHTML += '</ul>';
+	      	});
+	      	photoHTML += '</ul>';
 			$('#flickr').append(photoHTML);
-	   }
+	   	}
     	$.getJSON(flickerAPI, opts, displayPhotos);
   	}); //End Flickr
 
 	//TUMBLR API CALLS
   	$('#showTumblr').click(function () {
 		// Authenticate via API Key
-    	var tumblrAPI = "http://api.tumblr.com/v2/blog/undertale.tumblr.com/info?api_key=vloc4eXTLszkJIWjma1zAvx9wcYnXTaGS1QdKiTGHR3epAclxP",
+    	var tumblrAPI = 
+    			"http://api.tumblr.com/v2/blog/undertale.tumblr.com/info?api_key=vloc4eXTLszkJIWjma1zAvx9wcYnXTaGS1QdKiTGHR3epAclxP",
 			tumblrPhoto =
 				"http://api.tumblr.com/v2/blog/undertale.tumblr.com/posts/photo?api_key=vloc4eXTLszkJIWjma1zAvx9wcYnXTaGS1QdKiTGHR3epAclxP";
     	//T-Header
     	$.ajax({
-      	url: tumblrAPI,
-      	dataType: 'jsonp',
-      	success: function (results) {
+      		url: tumblrAPI,
+      		dataType: 'jsonp',
+      		success: function (results) {
         		$("h1").html(results.response.blog.title);
-      	}
+      		}
     	});//end Title Pull
     	//T-Photos
     	$.ajax({
-      	url: tumblrPhoto,
-      	dataType: 'jsonp',
-      	success: function (data) {
-        		var photos = data.response.posts;
-        		$.each(photos, function (i) {
-          		var url = photos[i].photos[0].original_size.url,
-            	sum = photos[i].summary,
-            	photo = '<ul>';
-          		photo += '<li>' + '<a href="' + url + '">';
-          		photo += '<img src="' + url + '"></a></li>';
-          		photo += '</ul>';
-          		$('#tumblr').append(photo);
-        		});
-      	}
+	      	url: tumblrPhoto,
+	      	dataType: 'jsonp',
+	      	success: function (data) {
+	    		var photos = data.response.posts;
+	    		$.each(photos, function (i) {
+	      			var url = photos[i].photos[0].original_size.url,
+	        			sum = photos[i].summary,
+	        			photo = '<ul>';
+	      			photo += '<li>' + '<a href="' + url + '">';
+	      			photo += '<img src="' + url + '"></a></li>';
+	      			photo += '</ul>';
+	      			$('#tumblr').append(photo);
+	    		});
+      		}
     	});//end Photo's Pull
   	});//end tumblr
   
@@ -67,27 +67,27 @@ $(document).ready(function () {
       	tumblrPhoto =
         		"http://api.tumblr.com/v2/blog/undertale.gq/posts/photo?api_key=vloc4eXTLszkJIWjma1zAvx9wcYnXTaGS1QdKiTGHR3epAclxP";
     	$.ajax({
-      	url: tumblrAPI,
-      	dataType: 'jsonp',
-      	success: function (results) {
+	      	url: tumblrAPI,
+	      	dataType: 'jsonp',
+	      	success: function (results) {
         		$("h1").html(results.response.blog.title);
-      	}
+      		}
     	});
     	$.ajax({
-      	url: tumblrPhoto,
-      	dataType: 'jsonp',
-      	success: function (data) {
+	      	url: tumblrPhoto,
+	      	dataType: 'jsonp',
+	      	success: function (data) {
         		var photos = data.response.posts;
         		$.each(photos, function (i) {
-          		var url = photos[i].photos[0].original_size.url,
-            	sum = photos[i].summary,
-            	photo = '<ul>';
-          		photo += '<li>' + '<a href="' + url + '">';
-          		photo += '<img src="' + url + '"></a></li>';
-          		photo += '</ul>';
-          		$('#artist1').append(photo);
+	          		var url = photos[i].photos[0].original_size.url,
+	            	sum = photos[i].summary,
+	            	photo = '<ul>';
+	          		photo += '<li>' + '<a href="' + url + '">';
+	          		photo += '<img src="' + url + '"></a></li>';
+	          		photo += '</ul>';
+	          		$('#artist1').append(photo);
         		});
-      	}
+      		}
     	});//end Photo's Pull
   	});//end Artist 1
   
@@ -99,16 +99,16 @@ $(document).ready(function () {
       	tumblrPhoto =
         		"http://api.tumblr.com/v2/blog/undertale.ga/posts/photo?api_key=vloc4eXTLszkJIWjma1zAvx9wcYnXTaGS1QdKiTGHR3epAclxP";
     	$.ajax({
-      	url: tumblrAPI,
-      	dataType: 'jsonp',
-      	success: function (results) {
+	      	url: tumblrAPI,
+	      	dataType: 'jsonp',
+	      	success: function (results) {
         		$("h1").html(results.response.blog.title);
-      	}
+      		}
     	});
     	$.ajax({
-      	url: tumblrPhoto,
-      	dataType: 'jsonp',
-      	success: function (data) {
+	      	url: tumblrPhoto,
+	      	dataType: 'jsonp',
+	      	success: function (data) {
         		var photos = data.response.posts;
         		$.each(photos, function (i) {
           		var url = photos[i].photos[0].original_size.url,
@@ -119,7 +119,7 @@ $(document).ready(function () {
           		photo += '</ul>';
           		$('#artist2').append(photo);
         		});
-      	}
+      		}
     	});//end Photo's Pull
   	});//end Artist 2
 }); // end ready
