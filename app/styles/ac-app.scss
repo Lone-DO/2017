@@ -70,6 +70,9 @@ $Gap: 20px;
 	}
 
 	.clock {
+			#clockPhase {
+				width: 50%;
+			}
 
 		span {
 			line-height: 50px;
@@ -81,7 +84,7 @@ $Gap: 20px;
 			border: 4px groove $BORDER_COLOR;
 			color: $BORDER_COLOR;
 			text-align: center;
-			font-size: 1.5rem;
+			// font-size: 1.3rem;
 			padding: 0 10px;
 		}
 
@@ -90,8 +93,17 @@ $Gap: 20px;
 			padding: 0;
 		}
 
-		#songPhase {
-			width: $FIT;
+		.radio {
+			position: relative;
+			width: 100%;
+			height: 0;
+			padding-bottom: 51%;
+			#songPhase {
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				left: 0; top: 0;
+			}
 		}
 
 		.btn-danger {
@@ -176,6 +188,7 @@ $Gap: 20px;
 	}
 
 	.blog-post {
+		width: 100%;
 		margin-top: 20px;
 		margin-bottom: 20px;
 		-webkit-box-shadow: 4px 3px 15px 0px rgba(0,0,0,0.75);
@@ -271,78 +284,56 @@ $Gap: 20px;
 
 @media (min-width: 640px){
 	#AC_App {
-	// 	#banner {
-	// 		width: 60%;
-	// 	}
-		
-	// 	.btn-danger {
-	// 		font-size: 1.5rem;
-	// 	}
-		
-	// 	#app {
-	// 		width: $FIT;
-	// 	}
-		
-	// 	#clockPhase {
-	// 		width: 50%;
-	// 	}
-		
-	// 	.clock {
-	// 		span {
-	// 			font-size: 2.5rem;
-	// 		}
-	// 	}
-		
-	// 	#songPhase {
-	// 		margin: 30px 0;
-	// 		height: 380px;
-	// 		width: 540px;
-	// 	}
-		
-	// 	.generation {
-		
-	// 		.genTitle {
-	// 		font-size: 1.7rem;
-	// 		}
 
-	// 		h1 {
-	// 			font-size: 2.5rem;
-	// 		}
+		#banner {
+			width: 90%;
+		}
 
-	// 		img {
-	// 			width: 60%;
-	// 		}
-	// 	}
+		.btn-danger {
+			font-size: 1.5rem;
+		}
 		
-	// 	article .date, 
-	// 	article .btn,
-	// 	article .platform,{
-	// 		font-size: 1.5rem;	
-	// 	}
+		#app {
+			width: $FIT;
+		}
+		
+		.page {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+		}
+		
+		.clock {
+			span {
+				font-size: 2.5rem;
+			}
+		}
+		
+		.generation {
+			.genTitle {
+			font-size: 1.7rem;
+			}
+			h1 {
+				font-size: 2.5rem;
+			}
+			img {
+				width: 60%;
+			}
+		}
 		
 	// 	/*gen.index*/
-	// 	.blog-post {
-	// 		font-size: 2rem;
-	// 		width: 35rem;
+		.blog-post {
+			font-size: 2.5rem;
+			width: 45rem;
 			
-	// 		h3 {
-	// 			font-size: 1.5rem;
-	// 		}
-
-	// 		li {
-	// 			font-size: 1.5rem;
-	// 		}
-
-	// 		p {
-	// 			font-size: 1.5rem;
-	// 		}
-	// 	}
+		}
 		
 	// 	/*footer*/
-	// 	.footer nav .btn,
-	// 	.footer p {
-	// 		font-size: 1.5rem;
-	// 	}
+		.footer nav .btn,
+		.footer p {
+			font-size: 2.5rem;
+		}
 	}
 }
 
@@ -351,7 +342,7 @@ $Gap: 20px;
 ****************************/
 
 @media (min-width: 768px){
-  
+	#AC_App {}
 
 }
 
