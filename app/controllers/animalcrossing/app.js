@@ -162,14 +162,14 @@ export default Ember.Controller.extend({
 									_currentGen = _cfID;
 									play();
 									banner.src = 
-										("../../../assets/images/AC_App/Animal_Crossing-_City_Folk_(logo).png");
+										("../../../assets/images/AC_App/Animal_Crossing_City_Folk_(logo).png");
 								});
 								/**Plays Original**/
 								$('.set0').click(function (){
 									pending = _currentGen;
 									_currentGen = _oID;
 									play();
-									banner.src ("../../../assets/images/AC_App/Animal_Crossing_Logo.png");
+									banner.src = ("../../../assets/images/AC_App/Animal_Crossing_Logo.png");
 								});
 
 							//Updating Seconds

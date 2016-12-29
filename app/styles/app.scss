@@ -1,4 +1,4 @@
-//@import "ac-app";
+@import "fonts";
 
 $Gap: 20px;
 $Max: 100%;
@@ -127,6 +127,16 @@ footer {
 	flex-direction: column;
 	justify-content: space-around;
 }
+
+/***************************
+	   Import AC SCSS
+****************************/
+@import "ac-app";
+
+/***************************
+	Import Undertale SCSS
+****************************/
+// @import "ut-app";
 
 /***************************
 	 	Media Queries

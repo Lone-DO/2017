@@ -1,29 +1,26 @@
-<div class="header">
-    <img id="banner" src="../assets/images/AC_App/Animal_Crossing_Logo.png">
-</div>
 <div id="AC_App">
-    <div>    
+    <div class="header"><!--AC Header-->  
+        <img id="banner" src="../assets/images/AC_App/Animal_Crossing_Logo.png">
+        </div>
+    <div><!--AC Page-->    
         {{render "animalcrossing/app"}}
-        <div>
-            <div>{{outlet}}</div>
-            {{#if hintShowing}}
-                <button {{action 'hideHint'}} class="cancel-button">X</button>
-                {{partial 'animalcrossing/guide'}}
-                {{/if}}
-            </div><!--End of AC Outlet Div-->
-        </div><!--End of container Div-->
-</div>
-
-<div class="footer">
-    <div id="time"></div>
-    <nav>
-        <li>
-            {{#link-to 'animalcrossing.gen'}}
-                <button {{action 'end'}} class="col-xs-6 btn btn-default">Generations</button>
-            {{/link-to}}
-            </li>
-        <li {{action 'showHint'}}>
-            <button class="col-xs-6 btn btn-default">Help!!</button>
-            </li>
-    </nav>
-</div>
+        <div>{{outlet}}</div>
+        {{#if hintShowing}}
+            <button {{action 'hideHint'}} class="cancel-button">X</button>
+            {{partial 'animalcrossing/guide'}}
+            {{/if}}
+        </div>
+    <div class="footer"><!--AC Footer-->  
+        <div id="time"></div>
+        <nav>
+            <li>
+                {{#link-to 'animalcrossing.gen'}}
+                    <button {{action 'end'}} class="btn btn-default col-xs-12">Generations</button>
+                    {{/link-to}}
+                </li>
+            <li {{action 'showHint'}}>
+                <button class="btn btn-default col-xs-12">Help!!</button>
+                </li>
+            </nav>
+        </div>
+    </div>
