@@ -1,3 +1,4 @@
+/*global $:false*/
 import Ember from 'ember';
 
 export default Ember.Controller.extend({
@@ -49,7 +50,7 @@ $(document).ready(function () {
 	    		var photos = data.response.posts;
 	    		$.each(photos, function (i) {
 	      			var url = photos[i].photos[0].original_size.url,
-	        			sum = photos[i].summary,
+	        			// sum = photos[i].summary,
 	        			photo = '<ul>';
 	      			photo += '<li>' + '<a href="' + url + '">';
 	      			photo += '<img src="' + url + '"></a></li>';
@@ -80,7 +81,7 @@ $(document).ready(function () {
         		var photos = data.response.posts;
         		$.each(photos, function (i) {
 	          		var url = photos[i].photos[0].original_size.url,
-	            	sum = photos[i].summary,
+	            	// sum = photos[i].summary,
 	            	photo = '<ul>';
 	          		photo += '<li>' + '<a href="' + url + '">';
 	          		photo += '<img src="' + url + '"></a></li>';
@@ -112,7 +113,7 @@ $(document).ready(function () {
         		var photos = data.response.posts;
         		$.each(photos, function (i) {
           		var url = photos[i].photos[0].original_size.url,
-            	sum = photos[i].summary,
+            	// sum = photos[i].summary,
             	photo = '<ul>';
           		photo += '<li>' + '<a href="' + url + '">';
           		photo += '<img src="' + url + '"></a></li>';

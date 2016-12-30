@@ -30,6 +30,7 @@ body {
 	border-radius: 20px;
 	border-style: inset;
 	margin: $Gap;
+	margin-right: 10px;
 	img[src*="icon"] {
 		width: 42px;
 		opacity: .60;
@@ -52,6 +53,10 @@ body {
 		display: block;
 		color: red;
 	}
+}
+
+.main {
+	margin: 20px 10px;
 }
 
 .showcase {
@@ -159,6 +164,7 @@ footer {
 		flex: 9 0px;
 	}
 	.aside { 
+		height: 750px;
 		order: 1;
 		span { display: none; }
 		li:hover {

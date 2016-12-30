@@ -61,12 +61,18 @@ $Gap: 20px;
 	  	transform: scale(1.2);
 	}
 
+	.page {
+		button {
+			width: 100%;
+		}
+	}
+
 /***************************
           Clock
 ****************************/
 	
 	.title {
-		font-size: 2rem;
+		font-size: 2em;
 	}
 
 	.clock {
@@ -282,6 +288,14 @@ $Gap: 20px;
 	 		Media Queries
 ****************************/
 
+@media (max-width: 321px){
+	#AC_App {
+		.clockTime {
+			font-size: 1rem;
+		}
+	}
+}
+
 @media (min-width: 640px){
 	#AC_App {
 
@@ -342,23 +356,48 @@ $Gap: 20px;
 ****************************/
 
 @media (min-width: 768px){
-	#AC_App {}
+	#AC_App {
+		.generation {
+			dd, .genTitle {
+				font-size: 2.2em;
+			}
+			button {
+				font-size: 2em;
+			}
+		}
 
+		#guide {
+			font-size: 2rem;
+			h3 {
+				font-size: 2em;
+			}
+		}
+
+		.title {
+			font-size: 2.5em;
+		}
+	}
 }
 
 /***************************
-	 		Width 960px
-****************************/
-
-@media (min-width: 960px) {
-  
-  
-}
-
-/***************************
-	 		Width 1024px
+	 	Width 1024px
 ****************************/
 
 @media (min-width: 1024px) {
-  
+	#AC_App {
+  		.clockTime {
+  			display: flex;
+  			justify-content: center;
+  		}
+
+  		.blog-post {
+    		font-size: 3rem;
+    		width: 20em;
+    		h3 {
+    			font-size: 3rem;
+    		}
+		}
+
+
+	}
 }
