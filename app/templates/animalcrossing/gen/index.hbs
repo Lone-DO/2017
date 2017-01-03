@@ -2,15 +2,21 @@
 <h2 class="title">Animal Crossing Generations</h2>
 
 {{#link-to 'animalcrossing.gen.create'}}<button class="action-button">New Generation</button>{{/link-to}}
-
-<div id="gensBtn">
-	{{#each model as |item|}} 
-		<li>{{item.title}}</li>
-		<li>{{item.date}}</li>
-		<li>{{item.platform}}</li>
-		<img src="{{item.imageURL}}">
-	{{/each}}
-	<button {{action 'load'}} class="action-button">Load Generations</button>
-	</div>
 	
 <div id="gens"></div>
+
+	{{#each model as |album|}} 
+		<div class="blog-post">
+			<div>
+				<h3>{{album.title}}</h3>
+				<p>{{album.date}}</p>
+				<p>{{album.platform}}</p>
+				<img src="{{album.imageURL}}">
+			</div>
+			<div>
+				<ul>
+					<li>{{album.hourID}}</li>
+				</ul>
+			</div>
+		</div>
+	{{/each}}
