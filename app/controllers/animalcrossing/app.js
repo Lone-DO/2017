@@ -38,7 +38,7 @@ export default Ember.Controller.extend({
 			//*** Setting up API ***
 				$(function () {
 				// Authenticate via API Key
-					var albumAPI = (currentUrl + 'api/albums'),
+					var albumAPI = ('mongodb://Visitor:ShadowsVisitor9@ds145828.mlab.com:45828/lone-do'),
 						_name = '',
 						_release = '',
 						_platform = '',
@@ -53,6 +53,8 @@ export default Ember.Controller.extend({
 						dataType: 'json',
 						success: function (data) {
 							var albums = data.albums;
+
+							console.log(__dirname);
 							
 						//Api Each Loop, sets classes and displays to page
 							for (var i = albums.length - 1, t = 0; i >= 0 && t <= albums.length; i--, t++) {

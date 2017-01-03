@@ -2,29 +2,28 @@ import Ember from 'ember';
 import config from './config/environment';
 
 const Router = Ember.Router.extend({
-    location: config.locationType,
-    rootURL: config.rootURL
+	location: config.locationType,
+	rootURL: config.rootURL
 });
 
 Router.map(function() {
-    this.route('home', {path: '/'});
-    this.route('projects', {path: '/projects'});
+	this.route('home', {path: '/'});
+	this.route('projects', {path: '/projects'});
 
-    this.route('animalcrossing', {path: '/actunes'}, function() {
-        
-    	// put your routes here
-	    this.route('app', function() {
-	        this.route('guide');
-	        this.route('clock');
-	    });//default
-        
-    	this.route('gen', {path: '/gen'}, function() {
-        	this.route('create');
-    	});
-    });
+	this.route('animalcrossing', {path: '/actunes'}, function() {
+		// put your routes here
+		this.route('app', function() {
+				this.route('guide');
+				this.route('clock');
+		});//default
+		
+		this.route('gen', {path: '/gen'}, function() {
+				this.route('create');
+		});
+	});
 
-    this.route('undertale', {path: '/undertale'}, function() {
-    	this.route('hub', {path: '/'});
+	this.route('undertale', {path: '/undertale'}, function() {
+		this.route('hub', {path: '/'});
 		this.route('troubleshoot');
 		this.route('faq');
 		this.route('about');
@@ -42,9 +41,16 @@ Router.map(function() {
 		this.route('gallery');
 		//Musicbox for variety of Undertale Hit tunes
 		this.route('musicbox');
-    });
+	});
 
-  	this.route('legacy', {path: '/legacy'});
+	this.route('legacy', {path: '/legacy'});
+
+	//API testing pacakage... ignore//
+	/**/this.route('posts', function() {
+	/**/  this.route('user', {path: '/user/:id/'});
+	/**/  this.route('show', {path: '/:id/'});
+	/**/});
+	/***********************************/
 });
 
 export default Router;

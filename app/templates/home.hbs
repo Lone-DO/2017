@@ -4,3 +4,7 @@
 <p>
 	Donec ac vestibulum elit, eu sodales ante. Quisque mollis auctor quam, a volutpat urna dignissim eu. Mauris tempor urna blandit, dictum ligula quis, elementum leo. Proin pretium pharetra diam, at finibus enim cursus sed. Aenean sed ultrices urna, a tempor neque. Sed porta neque a metus imperdiet condimentum. Quisque eleifend semper dapibus. Proin volutpat lacus vel ligula efficitur egestas. Morbi sed felis eu enim sodales luctus vel eget turpis. Vestibulum lobortis ex sit amet rutrum feugiat. Mauris feugiat metus lacus, eget luctus ligula ornare vitae. Sed lectus sem, posuere ut dignissim sed, pharetra eget neque. In semper, justo at ullamcorper fringilla, mauris nibh tincidunt turpis, at mollis orci quam at est. Quisque pulvinar placerat lacus ac dignissim.
 	</p>
+
+	{{#each album in model.albums}}
+		{{gen-album album=album}}
+	{{/each}}

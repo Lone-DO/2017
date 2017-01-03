@@ -30,7 +30,7 @@ module.exports = function(app) {
 	var server = http.createServer(app);
 	var bodyParser = require('body-parser');
 
-	app.use(express.static(__dirname + '/src'));
+	app.use(express.static(__dirname + '/app'));
 	app.use(bodyParser());
 
 	global.config = require('./config');
@@ -50,7 +50,7 @@ module.exports = function(app) {
 	});
 
 	//listen for requests
-	server.listen(global.config.APP_PORT);
+	app.listen(global.config.APP_PORT);
 	console.log('Animal Crossing Project');
 	console.log('App started on port ' + global.config.APP_PORT);
 };
