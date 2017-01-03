@@ -4,6 +4,12 @@
 {{#link-to 'animalcrossing.gen.create'}}<button class="action-button">New Generation</button>{{/link-to}}
 
 <div id="gensBtn">
+	{{#each model as |item|}} 
+		<li>{{item.title}}</li>
+		<li>{{item.date}}</li>
+		<li>{{item.platform}}</li>
+		<img src="{{item.imageURL}}">
+	{{/each}}
 	<button {{action 'load'}} class="action-button">Load Generations</button>
 	</div>
 	
