@@ -8,6 +8,7 @@
 	{{#each model as |album|}} 
 		<div class="blog-post">
 			<div>
+				<h1>{{index}}</h1>
 				<h3>{{album.title}}</h3>
 				<p>{{album.date}}</p>
 				<p>{{album.platform}}</p>
@@ -15,8 +16,12 @@
 			</div>
 			<div>
 				<ul>
-					<li>{{album.hourID}}</li>
+
+					<li class="idArray"> {{album.hourID}} </li>
 				</ul>
+				
 			</div>
 		</div>
 	{{/each}}
+
+

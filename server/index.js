@@ -43,7 +43,8 @@ module.exports = function(app) {
 		title: 'string',
 		date: 'string',
 		platform: 'string',
-		imageURL: 'string'
+		imageURL: 'string',
+		hourID: 'string'
 	});
 
 	var AlbumModel = mongoose.model('album', albumSchema);
