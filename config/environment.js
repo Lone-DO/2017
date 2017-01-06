@@ -2,7 +2,7 @@
 
 module.exports = function(environment) {
   var ENV = {
-    modulePrefix: 'portfolio',
+    modulePrefix: 'lone-do.github.io',
     environment: environment,
     rootURL: '/',
     locationType: 'auto',
