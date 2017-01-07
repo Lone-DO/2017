@@ -141,7 +141,7 @@ export default Ember.Controller.extend({
 								 img = document.getElementById('clockPhase'),
 								 iframe = document.getElementById('songPhase'),
 								 source = "../assets/images/AC_App/Timeline/",
-								 vSource = "http://www.youtube.com/embed/",
+								 vSource = "https://www.youtube.com/embed/",
 								 imgTag = "", //Tag for img by hour
 								 currentTime = "",
 								 autoplay = "?autoplay=1",
