@@ -1,7 +1,7 @@
 import Ember from 'ember';
 
 export default Ember.Controller.extend({
-	 actions: {
+	actions: {
 	 	end: function () {
             this.set('isStarted', false);
         },
@@ -10,6 +10,12 @@ export default Ember.Controller.extend({
         },
         hideHint: function () {
             this.set('hintShowing', false);
+        },
+        showHour: function () {
+            this.set('hourShowing', true);
+        },
+        hideHour: function () {
+            this.set('hourShowing', false);
         }
     }
 });

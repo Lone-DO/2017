@@ -1,27 +1,4 @@
 {{#link-to 'animalcrossing'}}<button class="cancel-button">Back</button>{{/link-to}} 
 <h2 class="title">Animal Crossing Generations</h2>
-
-{{#link-to 'animalcrossing.gen.create'}}<button class="action-button">New Generation</button>{{/link-to}}
 	
 <div id="gens"></div>
-
-	{{#each model as |album|}} 
-		<div class="blog-post">
-			<div>
-				<h1>{{index}}</h1>
-				<h3>{{album.title}}</h3>
-				<p>{{album.date}}</p>
-				<p>{{album.platform}}</p>
-				<img src="{{album.imageURL}}">
-			</div>
-			<div>
-				<ul>
-
-					<li class="idArray"> {{album.hourID}} </li>
-				</ul>
-				
-			</div>
-		</div>
-	{{/each}}
-
-

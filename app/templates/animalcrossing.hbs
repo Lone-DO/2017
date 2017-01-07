@@ -8,6 +8,12 @@
         {{#if hintShowing}}
             <button {{action 'hideHint'}} class="cancel-button">X</button>
             {{partial 'animalcrossing/guide'}}
+            <button {{action 'hideHint'}} class="cancel-button">X</button>
+            {{/if}}
+        {{#if hourShowing}}
+            <button {{action 'hideHour'}} class="cancel-button">X</button>
+            {{partial 'animalcrossing/gen/index'}}
+            <button {{action 'hideHour'}} class="cancel-button">X</button>
             {{/if}}
         </div>
     <div class="footer"><!--AC Footer-->  
@@ -20,6 +26,9 @@
                 </li>
             <li {{action 'showHint'}}>
                 <button class="btn btn-default col-xs-12">Help!!</button>
+                </li>
+            <li {{action 'showHour'}}>
+                <button class="btn btn-default col-xs-12">View HourIds</button>
                 </li>
             </nav>
         </div>
