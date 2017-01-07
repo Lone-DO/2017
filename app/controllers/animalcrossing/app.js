@@ -38,7 +38,7 @@ export default Ember.Controller.extend({
 			//*** Setting up API ***
 				$(function () {
 				// Authenticate via API Key
-					var albumAPI = ('mongodb://Visitor:ShadowsVisitor9@ds145828.mlab.com:45828/lone-do'),
+					var albumAPI = ('https://api.mlab.com/api/1/databases/lone-do/collections/albums?apiKey=9P6rUGDfq5OxFXag9RZYNkk3U2vF6IT0'),
 						_name = '',
 						_release = '',
 						_platform = '',
@@ -52,15 +52,14 @@ export default Ember.Controller.extend({
 						url: albumAPI,
 						dataType: 'json',
 						success: function (data) {
-							var albums = data.albums;
-
-							console.log(__dirname);
-							
+							var albums = data;
+							console.log(albums.length);
+	
 						//Api Each Loop, sets classes and displays to page
 							for (var i = albums.length - 1, t = 0; i >= 0 && t <= albums.length; i--, t++) {
 							//Api data storing
-								_name = albums[i].labelName,
-								_release = albums[i].releaseDate,
+								_name = albums[i].title,
+								_release = albums[i].date,
 								_platform = albums[i].platform,
 								_img = albums[i].imageURL,
 								_imgOver = albums[i].imageHover,
