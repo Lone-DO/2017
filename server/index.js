@@ -22,49 +22,49 @@ module.exports = function(app) {
   	proxies.forEach(function(route) { route(app); });
 //Above is Ember-CLI Default Needs
 
-  	var express = require('express');
-	var mongoose = require('mongoose');
+ //  	var express = require('express');
+	// var mongoose = require('mongoose');
 
-	var app = express();
+	// var app = express();
 
-	app.use(function(req, res, next) {
-	    res.setHeader('Access-Control-Allow-Origin', 'http://localhost:4200');
-	  	res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-	  	res.header('Access-Control-Allow-Methods', 'POST, GET, PUT, DELETE, OPTIONS');
-	    next();
-	});
+	// app.use(function(req, res, next) {
+	//     res.setHeader('Access-Control-Allow-Origin', 'http://localhost:4200');
+	//   	res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+	//   	res.header('Access-Control-Allow-Methods', 'POST, GET, PUT, DELETE, OPTIONS');
+	//     next();
+	// });
 
-	// mongoose.connect('mongodb://localhost/emberData');
-	mongoose.connect(
-		'mongodb://Visitor:ShadowsVisitor9@ds145828.mlab.com:45828/lone-do'
-		)
+	// // mongoose.connect('mongodb://localhost/emberData');
+	// mongoose.connect(
+	// 	'mongodb://Visitor:ShadowsVisitor9@ds145828.mlab.com:45828/lone-do'
+	// 	)
 
-	var albumSchema = new mongoose.Schema({
-		title: 'string',
-		date: 'string',
-		platform: 'string',
-		imageURL: 'string',
-		hourID: 'string'
-	});
+	// var albumSchema = new mongoose.Schema({
+	// 	title: 'string',
+	// 	date: 'string',
+	// 	platform: 'string',
+	// 	imageURL: 'string',
+	// 	hourID: 'string'
+	// });
 
-	var AlbumModel = mongoose.model('album', albumSchema);
-	//New lines!
-	app.get('/api/',function(req,res) {
-		res.send('Working');
-	});
+	// var AlbumModel = mongoose.model('album', albumSchema);
+	// //New lines!
+	// app.get('/api/',function(req,res) {
+	// 	res.send('Working');
+	// });
 
-	app.listen('4500');//Ports is whatever you wish it to be~
+	// app.listen('4500');//Ports is whatever you wish it to be~
 
-	app.get('/api/albums', function(req,res) {
-		AlbumModel.find({},function(err,docs) {
-			if(err) {
-				res.send({error:err});
-			}
-			else {
-				res.send({album:docs});//album = model;; docs = db.response
-			}
-		});
-	});
+	// app.get('/api/albums', function(req,res) {
+	// 	AlbumModel.find({},function(err,docs) {
+	// 		if(err) {
+	// 			res.send({error:err});
+	// 		}
+	// 		else {
+	// 			res.send({album:docs});//album = model;; docs = db.response
+	// 		}
+	// 	});
+	// });
 
 
 // 	/*** Transfer from Server.js ***/

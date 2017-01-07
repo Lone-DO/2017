@@ -22,9 +22,6 @@ module.exports = function(environment) {
       // when it is created
     },
 
-    contentSecurityPolicy: { //reconfig later
-     'connect-src' : "'self' http://localhost:4500"
-    }
   };
 
   if (environment === 'development') {
