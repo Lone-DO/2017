@@ -44,3 +44,89 @@
 	justify-content: center;
 	align-items: center;
 }
+
+/***************************
+	  FlexBox Queries
+****************************/
+
+@media (min-width: 600px) {
+	.aside { flex: 1 auto; }
+}
+
+@media (min-width: 640px){
+	#AC_App {
+		.page {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+		}
+	}
+	#UT_App {
+		/* Tuned Gallery */
+		#tumblr,
+		#flickr,
+		#artist1,
+		#artist2 {
+			-webkit-flex-flow: row wrap;
+			flex-flow: row wrap;
+			justify-content: space-around;
+			-webkit-align-content: flex-end;
+			align-content: flex-end;
+		}
+	}
+}
+
+@media (min-width: 768px) {
+	.main { 
+		flex: 9 0px;
+	}
+	.aside { 
+		order: 1;
+	}
+	.main { order: 2; }
+	footer { order: 3; }
+
+	#UT_App {
+		.mymenu, 
+		.nav,
+		#musicbox {
+			display: -webkit-flex;
+			display: flex;
+			-webkit-flex-direction: row;
+			flex-direction: row;
+			-webkit-align-items: center;
+			align-items: center;
+		}
+
+		.mymenu, 
+		.nav {
+			-webkit-justify-content: center;
+			justify-content: center;
+		}
+
+		#musicbox {
+			-webkit-justify-content: space-around;
+			justify-content: space-around;
+		}
+
+		#musicbox iframe[src*='podsnack'] {
+			-webkit-flex: 2 0 0; 
+			flex: 3 0 0;
+		}
+
+		#musicbox iframe[src*='spotify'] {
+			-webkit-flex: 1 0 0;
+			flex: 1 0 0;
+		}
+	}
+}
+
+@media (min-width: 1024px) {
+	#AC_App {
+  		.clockTime {
+  			display: flex;
+  			justify-content: center;
+  		}
+  	}
+}
