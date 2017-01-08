@@ -1,4 +1,6 @@
-
+/***************************
+	   Import Main SCSS
+****************************/
 * {
 	box-sizing: border-box;
 	padding: 0;
@@ -87,79 +89,4 @@ header {
 
 footer {
 	margin-top: $Gap;
-}
-
-/***************************
-          Flex-box
-****************************/
-
-.wrapper {
-	display: -webkit-box;
-	display: -moz-box;
-	display: -ms-flexbox;
-	display: -webkit-flex;
-	display: flex;  
-	-webkit-flex-flow: row wrap;
-	flex-flow: row wrap;
-	font-weight: bold;
-	text-align: center;
-	> * {
-		padding: 10px;
-		flex: 1 $MAX;
-	}
-}
-
-.showcase {
-	display: flex;
-	align-items: center;
-	flex-flow: row wrap;
-	> * {flex: 1 $MAX;}
-  	img {order: 1; flex: 1 auto;}
-  	h2 {order: 2; flex: 11 auto;}
-  	p {order: 3;}
-}
-
-.main {
-	text-align: left;
-}
-
-.aside {
-	display: flex;
-	flex-direction: column;
-	justify-content: space-around;
-}
-
-/***************************
-	 	Media Queries
-****************************/
-
-@media all and (min-width: 600px) {
-	.aside { flex: 1 auto; }
-}
-
-@media all and (max-width: 767px) {
-	li { height: 36px; }
-	.aside {
-		li img { display: none; }
-	}
-}
-
-@media all and (min-width: 768px) {
-	.main { 
-		padding-left: $Gap;
-		flex: 9 0px;
-	}
-	.aside { 
-		height: 750px;
-		order: 1;
-		span { display: none; }
-		li:hover {
-			span {
-				display: block;
-				color: red;
-			}
-		}
-	} 
-	.main { order: 2; }
-	footer { order: 3; }
 }

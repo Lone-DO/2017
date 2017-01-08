@@ -1,0 +1,46 @@
+/***************************
+          Flex-box
+****************************/
+
+.wrapper {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;  
+	-webkit-flex-flow: row wrap;
+	flex-flow: row wrap;
+	font-weight: bold;
+	text-align: center;
+	> * {
+		padding: 10px;
+		flex: 1 $MAX;
+	}
+}
+
+.showcase {
+	display: flex;
+	align-items: center;
+	flex-flow: row wrap;
+	> * {flex: 1 $MAX;}
+  	img {order: 1; flex: 1 auto;}
+  	h2 {order: 2; flex: 11 auto;}
+  	p {order: 3;}
+}
+
+.main {
+	text-align: left;
+}
+
+.aside {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+}
+
+#AC_App, #guide {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}

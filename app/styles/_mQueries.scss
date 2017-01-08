@@ -1,0 +1,289 @@
+/***************************
+	 Main Media Queries
+****************************/
+
+@media (min-width: 600px) {
+	.aside { flex: 1 auto; }
+}
+
+@media (max-width: 767px) {
+	li { height: 36px; }
+	.aside {
+		li img { display: none; }
+	}
+}
+
+@media (min-width: 768px) {
+	.main { 
+		padding-left: $Gap;
+		flex: 9 0px;
+	}
+	.aside { 
+		height: 750px;
+		order: 1;
+		span { display: none; }
+		li:hover {
+			span {
+				display: block;
+				color: red;
+			}
+		}
+	} 
+	.main { order: 2; }
+	footer { order: 3; }
+}
+
+/***************************
+	AC-Tune Media Queries
+****************************/
+
+@media (max-width: 321px){
+	#AC_App {
+		.clockTime {
+			font-size: 1rem;
+		}
+	}
+}
+
+@media (min-width: 640px){
+	#AC_App {
+		#banner {
+			width: 90%;
+		}
+
+		.btn-danger {
+			font-size: 1.5rem;
+		}
+		
+		#app {
+			width: $FIT;
+		}
+		
+		.page {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+		}
+		
+		.clock {
+			span {
+				font-size: 2.5rem;
+			}
+		}
+		
+		.generation {
+			.genTitle {
+			font-size: 1.7rem;
+			}
+			h1 {
+				font-size: 2.5rem;
+			}
+			img {
+				width: 60%;
+			}
+		}
+		
+	// 	/*gen.index*/
+		.blog-post {
+			font-size: 2.5rem;
+			width: 45rem;
+			
+		}
+		
+	// 	/*footer*/
+		.footer nav .btn,
+		.footer p {
+			font-size: 2.5rem;
+		}
+	}
+}
+
+/***************************
+	 		Width 768px
+****************************/
+
+@media (min-width: 768px){
+	#AC_App {
+		.generation {
+			dd, .genTitle {
+				font-size: 2.2em;
+			}
+			button {
+				font-size: 2em;
+			}
+		}
+
+		#guide {
+			font-size: 2rem;
+			h3 {
+				font-size: 2em;
+			}
+		}
+
+		.title {
+			font-size: 2.5em;
+		}
+	}
+}
+
+/***************************
+	 	Width 1024px
+****************************/
+
+@media (min-width: 1024px) {
+	#AC_App {
+  		.clockTime {
+  			display: flex;
+  			justify-content: center;
+  		}
+
+  		.blog-post {
+    		font-size: 3rem;
+    		width: 20em;
+    		h3 {
+    			font-size: 3rem;
+    		}
+		}
+
+
+	}
+}
+
+/***************************
+	UT-App Media Queries
+****************************/
+
+@media (min-width: 640px){
+	#UT_App {
+		/* Tuned Gallery */
+		#tumblr,
+		#flickr,
+		#artist1,
+		#artist2 {
+			-webkit-flex-flow: row wrap;
+			flex-flow: row wrap;
+			justify-content: space-around;
+			-webkit-align-content: flex-end;
+			align-content: flex-end;
+		}
+
+		#tumblr img,
+		#flickr img,
+		#artist1 img,
+		#artist2 img {
+			max-width: 40rem; 
+		}
+
+		#purchase iframe {
+			width: 400px;
+		}
+	}
+}
+
+/***************************
+	 		Width 768px
+****************************/
+
+@media (min-width: 768px){
+  	#UT_App {
+		#purchase iframe {
+			width: 500px;
+			height: 320px;
+		}
+
+		.container {
+			width: 95%;
+		}
+
+		.mymenu, 
+		.nav,
+		#musicbox {
+			display: -webkit-flex;
+			display: flex;
+			-webkit-flex-direction: row;
+			flex-direction: row;
+			-webkit-align-items: center;
+			align-items: center;
+		}
+
+		.mymenu, 
+		.nav {
+			-webkit-justify-content: center;
+			justify-content: center;
+		}
+
+		#musicbox {
+			-webkit-justify-content: space-around;
+			justify-content: space-around;
+		}
+
+		#musicbox iframe[src*='podsnack'] {
+			-webkit-flex: 2 0 0; 
+			flex: 3 0 0;
+			padding: 0 10px;
+		}
+
+		#musicbox iframe[src*='spotify'] {
+			-webkit-flex: 1 0 0;
+			flex: 1 0 0;
+		}
+	}
+}
+
+/***************************
+	 		Width 960px
+****************************/
+
+@media (min-width: 960px) {
+	#UT_App {
+		.mymenu li,
+		.mailbox {
+			font-size: 2.2rem;
+		}
+	}
+}
+
+/***************************
+	 		Width 1024px
+****************************/
+
+@media (min-width: 1024px) {
+	#UT_App {
+		.container {
+			width: 100%;
+		}
+
+		#purchase iframe {
+			width: 700px;
+			height: 320px;
+		}
+
+		iframe[src*='youtube'] {
+			max-width: 600px;
+			height: 300px;
+		}
+	  
+		/*About adjust*/
+		#about p {
+			font-size: 3.5rem;
+		}
+		#about li span {
+			font-size: 2rem;
+		}
+
+		/*Faq item adjust*/
+		#faq h1 {
+			font-size: 4.5rem;
+		}
+
+		#faq ul {
+			font-size: 2.4rem;
+		}
+
+		/*Contact page div adjust*/
+		#c-piece-1 {
+			width: 70%;
+		}
+	}
+}
