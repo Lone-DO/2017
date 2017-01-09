@@ -25,7 +25,7 @@ body {
 .aside {
 	width: 10%;
 	background-color: #222;
-	border-radius: 20px;
+	@include BORDER-RAD(20px);
 	border-style: inset;
 	margin: $Gap;
 	margin-right: 10px;
@@ -55,6 +55,13 @@ body {
 
 .main {
 	margin: 20px 10px;
+	text-align: left;
+}
+
+.wrapper {
+	font-weight: bold;
+	text-align: center;
+	> * {padding: 10px;}
 }
 
 .showcase {

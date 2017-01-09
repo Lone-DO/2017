@@ -3,46 +3,42 @@
 ****************************/
 
 .wrapper {
-	display: -webkit-box;
-	display: -moz-box;
-	display: -ms-flexbox;
-	display: -webkit-flex;
-	display: flex;  
-	-webkit-flex-flow: row wrap;
-	flex-flow: row wrap;
-	font-weight: bold;
-	text-align: center;
-	> * {
-		padding: 10px;
-		flex: 1 $MAX;
-	}
+	@include FLEXBOX;
+	@include FLEX-FLOW;
+	> * {flex: 1 $MAX;}
 }
 
 .showcase {
-	display: flex;
-	align-items: center;
-	flex-flow: row wrap;
+	@include FLEXBOX;
+	@include FLEX-FLOW;
+	@include ALIGN-ITEMS(center);
 	> * {flex: 1 $MAX;}
   	img {order: 1; flex: 1 auto;}
   	h2 {order: 2; flex: 11 auto;}
   	p {order: 3;}
 }
 
-.main {
-	text-align: left;
-}
-
 .aside {
-	display: flex;
-	flex-direction: column;
-	justify-content: space-around;
+	@include FLEXBOX;
+	@include FLEX-FLOW($dir: column);
+	@include JUSTIFY(space-around);
 }
 
 #AC_App, #guide {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
+	@include FLEXBOX;
+	@include FLEX-FLOW($dir: column);
+	@include FLEX-CENTER;
+}
+
+#UT_App {
+	#flickr,
+	#tumblr,
+	#artist1,
+	#artist2 {
+		@include FLEXBOX;
+		@include FLEX-FLOW($dir: column);
+		@include FLEX-CENTER;
+	}
 }
 
 /***************************
@@ -56,30 +52,28 @@
 @media (min-width: 640px){
 	#AC_App {
 		.page {
-			display: flex;
-			flex-direction: column;
-			justify-content: center;
-			align-items: center;
+			@include FLEXBOX;
+			@include FLEX-FLOW($dir: column);
+			@include FLEX-CENTER;
 		}
 	}
 	#UT_App {
 		/* Tuned Gallery */
+
 		#tumblr,
 		#flickr,
 		#artist1,
 		#artist2 {
-			-webkit-flex-flow: row wrap;
-			flex-flow: row wrap;
-			justify-content: space-around;
-			-webkit-align-content: flex-end;
-			align-content: flex-end;
+			@include FLEX-FLOW;
+			@include JUSTIFY(space-around);
+			@include ALIGN-CONTENT(flex-end);
 		}
 	}
 }
 
 @media (min-width: 768px) {
 	.main { 
-		flex: 9 0px;
+		@include FLEX(9 0px);
 	}
 	.aside { 
 		order: 1;
@@ -91,33 +85,26 @@
 		.mymenu, 
 		.nav,
 		#musicbox {
-			display: -webkit-flex;
-			display: flex;
-			-webkit-flex-direction: row;
-			flex-direction: row;
-			-webkit-align-items: center;
-			align-items: center;
+			@include FLEXBOX;
+			@include FLEX-FLOW;
+			@include ALIGN-ITEMS(center);
 		}
 
 		.mymenu, 
 		.nav {
-			-webkit-justify-content: center;
-			justify-content: center;
+			@include JUSTIFY(center);
 		}
 
 		#musicbox {
-			-webkit-justify-content: space-around;
-			justify-content: space-around;
+			@include JUSTIFY(space-around);
 		}
 
 		#musicbox iframe[src*='podsnack'] {
-			-webkit-flex: 2 0 0; 
-			flex: 3 0 0;
+			@include FLEX(3, 0, 0)
 		}
 
 		#musicbox iframe[src*='spotify'] {
-			-webkit-flex: 1 0 0;
-			flex: 1 0 0;
+			@include FLEX(1, 0, 0)
 		}
 	}
 }
@@ -125,8 +112,8 @@
 @media (min-width: 1024px) {
 	#AC_App {
   		.clockTime {
-  			display: flex;
-  			justify-content: center;
+  			@include FLEXBOX;
+  			@include JUSTIFY(center);
   		}
   	}
 }

@@ -1,0 +1,64 @@
+@mixin ALIGN-CONTENT($dir) {
+	-webkit-align-content: $dir;
+	align-content: $dir;
+}
+
+@mixin ALIGN-ITEMS($dir) {
+	-webkit-align-items: $dir;
+	align-items: $dir;
+}
+
+@mixin BORDER-RAD($values...) {
+	border-radius: $values;
+	-moz-border-radius: $values;
+	-webkit-border-radius: $values;
+}
+
+@mixin FLEX($values...) {
+	-webkit-flex: $values;
+	-moz-flex: $values;
+	flex: $values;
+}
+
+@mixin FLEXBOX() {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+}
+
+@mixin FLEX-CENTER() {
+	@include JUSTIFY(center);
+	@include ALIGN-CONTENT(center);
+	@include ALIGN-ITEMS(center);
+}
+
+@mixin FLEX-FLOW($dir: row, $wrap: wrap) {
+	-webkit-flex-flow: $dir $wrap;
+	flex-flow: $dir $wrap;
+}
+
+@mixin JUSTIFY($dir) {
+	-webkit-justify-content: $dir;
+	justify-content: $dir;
+}
+
+@mixin TRANSITION($values...) {
+	-moz-transition: $values;
+	-webkit-transition: $values;
+	transition: $values;
+}
+
+@mixin TRANSFORM($value) {
+	-moz-transform: scale($value);
+  	-webkit-transform: scale($value);
+  	transform: scale($value);
+}
+
+@mixin SHADOW($values...) {
+	-srckit-box-shadow: $values;
+	-webkit-box-shadow: $values;
+	-moz-box-shadow: $values;
+	box-shadow: $values;
+}
