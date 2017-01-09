@@ -30,46 +30,51 @@
 	@include FLEX-CENTER;
 }
 
-// #UT_App {
-// 	#flickr,
-// 	#tumblr,
-// 	#artist1,
-// 	#artist2 {
-// 		@include FLEXBOX;
-// 		@include FLEX-FLOW(column);
-// 		@include FLEX-CENTER;
-// 	}
+#UT_App {
+	.nav {
+		@include FLEXBOX;
+		@include FLEX-FLOW(column);
+		@include FLEX-CENTER;
+	}
+	#flickr,
+	#tumblr,
+	#artist1,
+	#artist2 {
+		@include FLEXBOX;
+		@include FLEX-FLOW(column);
+		@include FLEX-CENTER;
+	}
 
-// 	#hub div {
-// 		@include FLEXBOX;
-// 		@include FLEX-FLOW(column);
-// 		@include JUSTIFY(space-between);
-// 		@include ALIGN-ITEMS(center);
-// 	}
+	#hub div {
+		@include FLEXBOX;
+		@include FLEX-FLOW(column);
+		@include JUSTIFY(space-between);
+		@include ALIGN-ITEMS(center);
+	}
 
-// 	.contact {
-// 		@include FLEXBOX;
-// 		@include FLEX-FLOW(column);
-// 		@include FLEX-CENTER;
-// 	}
+	.contact {
+		@include FLEXBOX;
+		@include FLEX-FLOW(column);
+		@include FLEX-CENTER;
+	}
 
-// 	#faq {
-// 		@include FLEXBOX;
-// 		@include FLEX-FLOW(column);
-// 	}
+	#faq {
+		@include FLEXBOX;
+		@include FLEX-FLOW(column);
+	}
 
-// 	.controls {
-// 		@include FLEXBOX;
-// 		@include FLEX-FLOW(column);
-// 		@include ALIGN-ITEMS(center);
-// 	}
+	.controls {
+		@include FLEXBOX;
+		@include FLEX-FLOW(column);
+		@include ALIGN-ITEMS(center);
+	}
 
-// 	#musicbox {
-// 		@include FLEXBOX;
-// 		@include FLEX-FLOW(column);
-// 		@include FLEX-CENTER;
-// 	}
-// }
+	#musicbox {
+		@include FLEXBOX;
+		@include FLEX-FLOW(column);
+		@include FLEX-CENTER;
+	}
+}
 
 /***************************
 	  FlexBox Queries
@@ -89,7 +94,11 @@
 	}
 	#UT_App {
 		/* Tuned Gallery */
-
+		.page {
+			@include FLEXBOX;
+			@include FLEX-FLOW(column);
+			@include FLEX-CENTER;
+		}
 		#tumblr,
 		#flickr,
 		#artist1,

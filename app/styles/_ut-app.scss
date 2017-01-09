@@ -24,7 +24,11 @@
 	/***************************
 					Header
 	****************************/
-
+	nav {
+		li {
+			margin-bottom: 10px;
+		}
+	}
 	.mymenu  {
 		font-size: 1.8rem;
 		text-shadow: 0 1px 0 #ccc,
@@ -50,6 +54,18 @@
 	/***************************
 					 HUB
 	****************************/
+	.trailer {
+		position: relative;
+		width: 100%;
+		height: 0;
+		padding-bottom: 51%;
+		iframe {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			left: 0; top: 0;
+		}
+	}
 
 	img[src*="available"] {
 		width: 100%;
@@ -57,14 +73,9 @@
 		max-height: 205px;
 	}
 
-	iframe[src*='youtube'] {
-		width: 80%;
-		height: 300px;
-	}
-
 	#purchase iframe {
 		min-height: 200px;
-		min-width: 320px;
+		// min-width: 320px;
 	}
 
 	/***************************
@@ -74,12 +85,12 @@
 		font-size: 2rem;
 		letter-spacing: 3px;
 		word-spacing: 1px;
+		
 	}
 
 	img[src*="xscreen"],
 	img[src*="logo"] {
 		width: 100%;
-		min-height: 6em;
 		margin-bottom: 1.7rem;
 		margin-top: 1.7rem;
 	}

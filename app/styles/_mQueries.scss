@@ -7,9 +7,25 @@
 ****************************/
 
 @media (max-width: 321px){
+
+	.main {
+		padding: 10px 0; 
+	}
 	#AC_App {
 		.clockTime {
 			font-size: 1rem;
+		}
+	}
+
+	#UT_App {
+		#hub {
+			div, #purchase iframe {
+				margin: $Gap 0;
+			}
+		}
+
+		.nav {
+			margin: 0;
 		}
 	}
 }

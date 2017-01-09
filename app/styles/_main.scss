@@ -55,6 +55,9 @@ body {
 .main {
 	margin: 20px 10px;
 	text-align: left;
+	.intro img {
+		width: 100%;
+	}
 }
 
 .wrapper {
