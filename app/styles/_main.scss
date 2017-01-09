@@ -32,8 +32,7 @@ body {
 	img[src*="icon"] {
 		width: 42px;
 		opacity: .60;
-		-webkit-transition: width .75s;
-		transition: width .75s;
+		@include TRANSITION(width .75s);
 	}
 	li:hover {
 		img[src*="icon"] {

@@ -39,6 +39,36 @@
 		@include FLEX-FLOW($dir: column);
 		@include FLEX-CENTER;
 	}
+
+	#hub div {
+		@include FLEXBOX;
+		@include FLEX-FLOW($dir: column);
+		@include JUSTIFY(space-between);
+		@include ALIGN-ITEMS(center);
+	}
+
+	.contact {
+		@include FLEXBOX;
+		@include FLEX-FLOW($dir: column);
+		@include FLEX-CENTER;
+	}
+
+	#faq {
+		@include FLEXBOX;
+		@include FLEX-FLOW($dir: column);
+	}
+
+	.controls {
+		@include FLEXBOX;
+		@include FLEX-FLOW($dir: column);
+		@include ALIGN-ITEMS(center);
+	}
+
+	#musicbox {
+		@include FLEXBOX;
+		@include FLEX-FLOW($dir: column);
+		@include FLEX-CENTER;
+	}
 }
 
 /***************************
