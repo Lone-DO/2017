@@ -1,21 +1,57 @@
 import Ember from 'ember';
 
 /*global $:false*/
-var currentUrl = window.location.href;
-if (currentUrl.indexOf("/#/") > -1) {
-	currentUrl = currentUrl.slice(0, -2);
-}
-if (currentUrl.indexOf("/actunes") > -1) {
-	currentUrl = currentUrl.slice(0, -7);
-}
-if (currentUrl.indexOf("/gen") > -1) {
-	currentUrl = currentUrl.slice(0, -3);
-}
+var load = function () {
+	var albumAPI = ('https://api.mlab.com/api/1/databases/lone-do/collections/albums?apiKey=9P6rUGDfq5OxFXag9RZYNkk3U2vF6IT0');
+	$.ajax({
+		url: albumAPI,
+		dataType: 'json',
+		success: function (data) {
+			var albums = data;
+			
+		//Api Each Loop, sets classes and displays to page
+			for (var _i = albums.length - 1; _i >= 0; _i--) {
+			//Api data storing
+				var _name = albums[_i].title,
+					_release = albums[_i].date,
+					_platform = albums[_i].platform,
+					_img = albums[_i].imageURL,
+					_hourID = albums[_i].hourID,
+					Collection = '';
+					
+				//Api loop Head/ Opening
+				Collection += '<div class="blog-post">';
+				//Api Album Model
+					Collection += '<div>';
+						Collection += '<h3>' + _name + '</h3>';
+						Collection += '<p>' + _release + '</p>';
+						Collection += '<p>' + _platform + '</p>';
+						Collection += '<img src="' + _img + '"">';
+					Collection += '</div>';
+					Collection += '<div>';
+						Collection += '<ul>';
 
+						for (var h = _hourID.length - 1; h >= 0; h--) {
+							var _hour = _hourID[h],
+								list = '<li>' + _hour + '</li>';
+							Collection += list;
+						}
+
+						Collection += '</ul>';
+					Collection += '</div>';
+				//Api loop closing
+					Collection += '</div>';
+				//Posting Api data
+				$('#gens').append(Collection);
+			}
+		}
+	});
+};
 
 export default Ember.Controller.extend({
 	actions: {
 		isStarted: false, //defaults app to not started
+		genShowing: false, //defaults gen to not show
 		hintShowing: false, //defaults guide to not show
 	//Onclick of Launch img, Fire application
 		end: function () {
@@ -25,20 +61,16 @@ export default Ember.Controller.extend({
 			'use strict';
 			this.set('isStarted', true);
 			console.log('App Launched');
-			if (currentUrl.indexOf("/gen") > -1) {
-				currentUrl = currentUrl.slice(0, -3);
-			} else if (currentUrl.indexOf("/actunes") > -1) {
-				currentUrl = currentUrl.slice(0, -3);
-			}
 			$(function phases() {
 				var lastHr = -1,
 					lastMin = -1,
-					lastSec = -1;
+					lastSec = -1,
+					posted = false;
 				
 			//*** Setting up API ***
 				$(function () {
 				// Authenticate via API Key
-					var albumAPI = ('mongodb://Visitor:ShadowsVisitor9@ds145828.mlab.com:45828/lone-do'),
+					var albumAPI = ('https://api.mlab.com/api/1/databases/lone-do/collections/albums?apiKey=9P6rUGDfq5OxFXag9RZYNkk3U2vF6IT0'),
 						_name = '',
 						_release = '',
 						_platform = '',
@@ -52,15 +84,14 @@ export default Ember.Controller.extend({
 						url: albumAPI,
 						dataType: 'json',
 						success: function (data) {
-							var albums = data.albums;
-
-							console.log(__dirname);
-							
+							var albums = data;
+							console.log(albums.length);
+	
 						//Api Each Loop, sets classes and displays to page
 							for (var i = albums.length - 1, t = 0; i >= 0 && t <= albums.length; i--, t++) {
 							//Api data storing
-								_name = albums[i].labelName,
-								_release = albums[i].releaseDate,
+								_name = albums[i].title,
+								_release = albums[i].date,
 								_platform = albums[i].platform,
 								_img = albums[i].imageURL,
 								_imgOver = albums[i].imageHover,
@@ -98,11 +129,12 @@ export default Ember.Controller.extend({
 							
 							var index = albums.length - 1,
 								 /**Original/Gamecube**/
-								 _oID = albums[index - 0].hourID,
+								 _oID = albums[index - 2].hourID,
 								 /**CityFolk**/
-								 _cfID = albums[index - 2].hourID,
+								 _cfID = albums[index - 1].hourID,
 								 /**NewLeaf**/
-								 _nlID = albums[index - 1].hourID,
+								 _nlID = albums[index - 0].hourID,
+
 								 /**Defaults Original playlist**/
 								 _currentGen = _oID, 
 								 /**Dev var for verifying generation has changed**/
@@ -110,8 +142,9 @@ export default Ember.Controller.extend({
 								 banner = document.getElementById('banner'),
 								 img = document.getElementById('clockPhase'),
 								 iframe = document.getElementById('songPhase'),
-								 source = "../assets/images/AC_App/Timeline/",
-								 vSource = "http://www.youtube.com/embed/",
+								 // source = "../assets/images/AC_App/Timeline/",
+								 source = "https://raw.githubusercontent.com/Lone-DO/lone-do.github.io/ember/public/assets/images/AC_App/Timeline/",
+								 vSource = "https://www.youtube.com/embed/",
 								 imgTag = "", //Tag for img by hour
 								 currentTime = "",
 								 autoplay = "?autoplay=1",
@@ -119,18 +152,26 @@ export default Ember.Controller.extend({
 							
 							setInterval(function () {
 								var date = new Date(),
-									 hours = date.getHours(),
-									 minutes = date.getMinutes(),
-									 seconds = date.getSeconds(),
-									 vidTagAm = "", //Tag for vid by hour
-									 vidTagPm = "", //Tag for vid by hour
-									 tagHrs = ""; //Tracks hour and selects array
+									hours = date.getHours(),
+									minutes = date.getMinutes(),
+									seconds = date.getSeconds(),
+									vidTagAm = "", //Tag for vid by hour
+									vidTagPm = "", //Tag for vid by hour
+									tagHrs = "", //Tracks hour and selects array
+									currentUrl = window.location.href;
 								
 							//Adds 0 on front to avoid single digit time
 								if (hours < 10) {hours = "0" + hours; }
 								if (minutes < 10) {minutes = "0" + minutes; }
 								if (seconds < 10) {seconds = "0" + seconds; }
-								
+								if (!posted && currentUrl.indexOf("/gen") > -1 ) {
+									load();
+									posted = true;
+								}
+								$('.cancel-button').click(function (){
+									posted = false;
+								});
+
 								var play = function () {
 									if (hours < 10) {
 										tagHrs = hours.slice(1);
@@ -151,7 +192,7 @@ export default Ember.Controller.extend({
 							//Concatinates time Data & Displays
 								currentTime = hours + ":" + minutes + ":" + seconds;
 								/**Plays NewLeaf**/
-								$('.set2').click(function (){
+								$('.set0').click(function (){
 									pending = _currentGen;
 									_currentGen = _nlID;
 									play();
@@ -167,7 +208,7 @@ export default Ember.Controller.extend({
 										("../../../assets/images/AC_App/Animal_Crossing_City_Folk_(logo).png");
 								});
 								/**Plays Original**/
-								$('.set0').click(function (){
+								$('.set2').click(function (){
 									pending = _currentGen;
 									_currentGen = _oID;
 									play();
@@ -217,6 +258,6 @@ export default Ember.Controller.extend({
 				});
 			// *****API Rendering*****
 			}); //End of Strict Script
-		},
+		}
     }
 });
