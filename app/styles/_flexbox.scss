@@ -4,13 +4,13 @@
 
 .wrapper {
 	@include FLEXBOX;
-	@include FLEX-FLOW;
+	@include FLEX-FLOW(row wrap);
 	> * {flex: 1 $MAX;}
 }
 
 .showcase {
 	@include FLEXBOX;
-	@include FLEX-FLOW;
+	@include FLEX-FLOW(row wrap);
 	@include ALIGN-ITEMS(center);
 	> * {flex: 1 $MAX;}
   	img {order: 1; flex: 1 auto;}
@@ -20,56 +20,56 @@
 
 .aside {
 	@include FLEXBOX;
-	@include FLEX-FLOW($dir: column);
+	@include FLEX-FLOW(column);
 	@include JUSTIFY(space-around);
 }
 
-#AC_App, #guide {
+#AC_App, #AC_App #guide {
 	@include FLEXBOX;
-	@include FLEX-FLOW($dir: column);
+	@include FLEX-FLOW(column);
 	@include FLEX-CENTER;
 }
 
-#UT_App {
-	#flickr,
-	#tumblr,
-	#artist1,
-	#artist2 {
-		@include FLEXBOX;
-		@include FLEX-FLOW($dir: column);
-		@include FLEX-CENTER;
-	}
+// #UT_App {
+// 	#flickr,
+// 	#tumblr,
+// 	#artist1,
+// 	#artist2 {
+// 		@include FLEXBOX;
+// 		@include FLEX-FLOW(column);
+// 		@include FLEX-CENTER;
+// 	}
 
-	#hub div {
-		@include FLEXBOX;
-		@include FLEX-FLOW($dir: column);
-		@include JUSTIFY(space-between);
-		@include ALIGN-ITEMS(center);
-	}
+// 	#hub div {
+// 		@include FLEXBOX;
+// 		@include FLEX-FLOW(column);
+// 		@include JUSTIFY(space-between);
+// 		@include ALIGN-ITEMS(center);
+// 	}
 
-	.contact {
-		@include FLEXBOX;
-		@include FLEX-FLOW($dir: column);
-		@include FLEX-CENTER;
-	}
+// 	.contact {
+// 		@include FLEXBOX;
+// 		@include FLEX-FLOW(column);
+// 		@include FLEX-CENTER;
+// 	}
 
-	#faq {
-		@include FLEXBOX;
-		@include FLEX-FLOW($dir: column);
-	}
+// 	#faq {
+// 		@include FLEXBOX;
+// 		@include FLEX-FLOW(column);
+// 	}
 
-	.controls {
-		@include FLEXBOX;
-		@include FLEX-FLOW($dir: column);
-		@include ALIGN-ITEMS(center);
-	}
+// 	.controls {
+// 		@include FLEXBOX;
+// 		@include FLEX-FLOW(column);
+// 		@include ALIGN-ITEMS(center);
+// 	}
 
-	#musicbox {
-		@include FLEXBOX;
-		@include FLEX-FLOW($dir: column);
-		@include FLEX-CENTER;
-	}
-}
+// 	#musicbox {
+// 		@include FLEXBOX;
+// 		@include FLEX-FLOW(column);
+// 		@include FLEX-CENTER;
+// 	}
+// }
 
 /***************************
 	  FlexBox Queries
@@ -83,7 +83,7 @@
 	#AC_App {
 		.page {
 			@include FLEXBOX;
-			@include FLEX-FLOW($dir: column);
+			@include FLEX-FLOW(column);
 			@include FLEX-CENTER;
 		}
 	}

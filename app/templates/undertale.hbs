@@ -1,60 +1,63 @@
 <div id="UT_App">
-		<div class="header">
-			{{#link-to 'undertale'}}
-				<img id="logo" src="../assets/images/UT_App/undertale_logo.png">
-				{{/link-to}}
-			<nav class="navbar navbar-inverse mymenu" role="navigation">
+	<div class="header"><!--Top of Site-->
+		{{#link-to 'undertale'}}
+			<img id="logo" src="../assets/images/UT_App/undertale_logo.png">
+			{{/link-to}}
+		<nav class="navbar navbar-inverse mymenu" role="navigation">
 			<ul class="nav navbar-nav">
-				<li ><!--  ABOUT -->
-					{{#link-to 'undertale.about'}}ABOUT{{/link-to}}
-					</li> 
-				<li><!--  DEMO  -->
-					{{#link-to 'undertale.demo'}}DEMO{{/link-to}}
-					</li>
-				<li id="nav_merch"><!--  External Merch  -->
-					<a href="http://www.fangamer.com/collections/undertale">
-						MERCH<br>
+				{{#link-to 'undertale.about'}}
+					<li>ABOUT</li> 
+					{{/link-to}}
+				{{#link-to 'undertale.demo'}}
+					<li>DEMO</li>
+					{{/link-to}}
+				<a href="http://www.fangamer.com/collections/undertale">
+					<li id="nav_merch">MERCH<br>
 						<span>new!</span>
-						</a>
-					</li>
-				<li><!--  CONTACT -->
-					{{#link-to 'undertale.contact'}}CONTACT{{/link-to}}
-					</li>
-				<li><!--  FAQ -->
-					{{#link-to 'undertale.faq'}}FAQ!{{/link-to}}
-					</li>
-				<li class="mail"><!--  Fan Page  -->
-					{{#link-to 'undertale.mailbox'}}<img src="../assets/images/UT_App/mail-closed.ico">{{/link-to}}
-					</li>
-				<li><!--  Gallery Page  -->
-					{{#link-to 'undertale.gallery'}}Gallery{{/link-to}}
-					</li>
-				<li><!--  Musicbox Page -->
-					{{#link-to 'undertale.musicbox'}}♫Musicbox♫{{/link-to}}
-					</li>
+						</li>
+					</a>
+				{{#link-to 'undertale.contact'}}
+					<li>CONTACT</li>
+					{{/link-to}}
+				{{#link-to 'undertale.faq'}}
+					<li>FAQ!</li>
+					{{/link-to}}
+				{{#link-to 'undertale.mailbox'}}
+					<li class="mail">
+						<img src="../assets/images/UT_App/mail-closed.ico">
+						</li>
+					{{/link-to}}
+				{{#link-to 'undertale.gallery'}}
+					<li>Gallery</li>
+					{{/link-to}}
+				{{#link-to 'undertale.musicbox'}}
+					<li>♫Musicbox♫</li>
+					{{/link-to}}
 				</ul>
 			</nav>
-		</div><!--Top of Site-->
-	<div>{{outlet}}</div>
-  <div class="footer">
+		</div>
+	<div class="page"><!--UT Page-->
+		<div>{{outlet}}</div>
+		</div>
+  	<div class="footer"><!--UT Footer-->
 		<nav>
 			<ul>
+				{{#link-to 'undertale.troubleshoot'}}
 					<li><!-- TROUBLESHOOTING -->
-						{{#link-to 'undertale.troubleshoot'}}
-							<img src="../assets/images/UT_App/troubleshoot.png">
-							{{/link-to}}
+						<img src="../assets/images/UT_App/troubleshoot.png">
 						</li>
+					{{/link-to}}
 				<li>
 					<a href="http://twitter.com/undertale">
-					<img src="../assets/images/UT_App/twitterbutton.png"></a>
+						<img src="../assets/images/UT_App/twitterbutton.png"></a>
 
 					<a href="http://undertale.tumblr.com/">
-					<img src="../assets/images/UT_App/tumblrbutton.png"></a>
+						<img src="../assets/images/UT_App/tumblrbutton.png"></a>
 
 					<a href="http://store.steampowered.com/app/391540">
-					<img src="../assets/images/UT_App/steambutton.png"></a>
+						<img src="../assets/images/UT_App/steambutton.png"></a>
 					</li>
 				</ul>
 			</nav>
-	</div><!--End of Footer-->
-</div><!--  Bottom of Site  -->
+		</div>
+	</div><!--  Bottom of Site  -->

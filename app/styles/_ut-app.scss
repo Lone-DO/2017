@@ -1,294 +1,278 @@
-/***************************
-	Import Undertale SCSS
-****************************/
+	/***************************
+		Import Undertale SCSS
+	****************************/
 
-/***************************
-			 Base Styles
-****************************/
+	/***************************
+				 Base Styles
+	****************************/
+#UT_App {
+		font-family: dtm-sans;
+		text-align: center;
+		color: rgba(255, 255, 255, 0.79);
 
-body {
-	font-family: dtm-sans;
-	margin-right: auto;
-	margin-left: auto;
-	background: black;
-	text-align: center;
-	color: rgba(255, 255, 255, 0.79);
-}
+	ul  {
+		list-style: none;
+		padding: 0;
+	}
 
-ul  {
-	list-style: none;
-	padding: 0;
-}
+	iframe {
+		border-style: none;
+		border: 0;
+		margin-top: 20px;
+	}
 
-iframe {
-	 border-style: none;
-	 border: 0;
-}
+	/***************************
+					Header
+	****************************/
 
+	.mymenu  {
+		font-size: 1.8rem;
+		text-shadow: 0 1px 0 #ccc,
+					 0 6px 1px rgba(0,0,0,.1),
+					 0 0 5px rgba(0,0,0,.1),
+					 0 1px 3px rgba(0,0,0,.3),
+					 0 3px 5px rgba(0,0,0,.2),
+					 0 5px 10px rgba(0,0,0,.25),
+					 0 10px 10px rgba(0,0,0,.2),
+					 0 20px 20px rgba(0,0,0,.15);
+	}
 
-a:link,
-a:hover,
-a:active,
-a:visited {
-	text-decoration: none;
-}
+	#nav_merch,
+	#nav_merch a:visited,
+	#nav_merch a:link {
+		color: #fdb2bf;
+	}
 
-/***************************
-				Header
-****************************/
+	#nav_merch a span {
+		font-size: .8em;
+	}
 
-.mymenu  {
-	font-size: 1.8rem;
-	text-shadow: 0 1px 0 #ccc,
-				 0 6px 1px rgba(0,0,0,.1),
-				 0 0 5px rgba(0,0,0,.1),
-				 0 1px 3px rgba(0,0,0,.3),
-				 0 3px 5px rgba(0,0,0,.2),
-				 0 5px 10px rgba(0,0,0,.25),
-				 0 10px 10px rgba(0,0,0,.2),
-				 0 20px 20px rgba(0,0,0,.15);
-}
+	/***************************
+					 HUB
+	****************************/
 
-#nav_merch,
-#nav_merch a:visited,
-#nav_merch a:link {
-	color: #fdb2bf;
-}
+	img[src*="available"] {
+		width: 100%;
+		max-width: 574px;
+		max-height: 205px;
+	}
 
-#nav_merch a span {
-	font-size: .8em;
-}
+	iframe[src*='youtube'] {
+		width: 80%;
+		height: 300px;
+	}
 
-/***************************
-				 HUB
-****************************/
+	#purchase iframe {
+		min-height: 200px;
+		min-width: 320px;
+	}
 
-#hub iframe {
-	margin-top: 20px;
-}
+	/***************************
+					About
+	****************************/
+	#about {
+		font-size: 2rem;
+		letter-spacing: 3px;
+		word-spacing: 1px;
+	}
 
-img[src*="available"] {
-	width: 100%;
-	max-width: 574px;
-	max-height: 205px;
-}
+	img[src*="xscreen"],
+	img[src*="logo"] {
+		width: 100%;
+		min-height: 6em;
+		margin-bottom: 1.7rem;
+		margin-top: 1.7rem;
+	}
 
-iframe[src*='youtube'] {
-	width: 80%;
-	height: 300px;
-}
+	#xscr5 span {
+		padding-top: 50%;
+		word-spacing: -1px;
+		color: grey;
+		font-size: 1.3rem;
+	}
 
-#purchase iframe {
-	min-height: 200px;
-	min-width: 320px;
-}
+	#xscr12 p {
+		margin-bottom: 9.6rem;
+	}
 
-/***************************
-				About
-****************************/
-#about {
-	font-size: 2rem;
-	letter-spacing: 3px;
-	word-spacing: 1px;
-}
+	#xscr12-end {
+		margin-top: 27em;
+	}
 
-img[src*="xscreen"],
-img[src*="logo"] {
-	width: 100%;
-	min-height: 6em;
-	margin-bottom: 1.7rem;
-	margin-top: 1.7rem;
-}
-
-#xscr5 span {
-	padding-top: 50%;
-	word-spacing: -1px;
-	color: grey;
-	font-size: 1.3rem;
-}
-
-#xscr12 p {
-	margin-bottom: 9.6rem;
-}
-
-#xscr12-end {
-	margin-top: 27em;
-}
-
-#laugh {
-	font-size: 2rem;
-	letter-spacing: -.6px;
-}
+	#laugh {
+		font-size: 2rem;
+		letter-spacing: -.6px;
+	}
 
 
-/***************************
-				DEMO
-****************************/
+	/***************************
+					DEMO
+	****************************/
 
-.demo {
-	width: 80%;
-	margin: auto;
-}
+	.demo {
+		width: 80%;
+		margin: auto;
+	}
 
-img[src*="demo"] {
-	width: 70%;
-}
+	img[src*="demo"] {
+		width: 70%;
+	}
 
-img[src*="demo_a"] {
-	width: 100%;
-}
+	img[src*="demo_a"] {
+		width: 100%;
+	}
 
-.demo p {
-	letter-spacing: 1px;
-	margin-bottom: 3em;
-	font-size: 2rem;
-}
+	.demo p {
+		letter-spacing: 1px;
+		margin-bottom: 3em;
+		font-size: 2rem;
+	}
 
-.demo p span {
-	color: grey;
-	text-align: left;
-	font-size: 1.5rem; 
-}
+	.demo p span {
+		color: grey;
+		text-align: left;
+		font-size: 1.5rem; 
+	}
 
-/***************************
-			 Contact
-****************************/
+	/***************************
+				 Contact
+	****************************/
 
-.contact {
-	font-size: 2.4rem;
-}
+	.contact {
+		font-size: 2.4rem;
+	}
 
-img[src*="fix"] {
-	width: 70%;
-	min-height: 6em;
-}
+	img[src*="fix"] {
+		width: 70%;
+		min-height: 6em;
+	}
 
-div#c-piece-email p {
-	width: 531px;
-	margin-bottom: 2em;
-}
+	div#c-piece-email p {
+		width: 531px;
+		margin-bottom: 2em;
+	}
 
-div#c-piece-1 p,
-div#c-piece-email,
-div#c-piece-email p {
-	width: 80%;
-	margin-left: auto;
-	margin-right: auto;
-	text-align: center;
-}
+	div#c-piece-1 p,
+	div#c-piece-email,
+	div#c-piece-email p {
+		width: 80%;
+		margin-left: auto;
+		margin-right: auto;
+		text-align: center;
+	}
 
-#backToFront p {
-	color: yellow;
-}
+	#backToFront p {
+		color: yellow;
+	}
 
-#c-piece-unrelated a {
-	color: #03abfe;
-}
+	#c-piece-unrelated a {
+		color: #03abfe;
+	}
 
-/***************************
-				 FAQ
-****************************/
+	/***************************
+					 FAQ
+	****************************/
 
-#faq ul{
-	text-align: left;
-	font-size: 1.58rem;
-	margin-left: 3.58em;
-	margin-bottom: 2em;
-}
+	#faq ul {
+		text-align: left;
+		font-size: 1.58rem;
+		margin-left: 3.58em;
+		margin-bottom: 2em;
+	}
 
-#faq h1 {
-	text-align: left;
-}
+	#faq h1 {
+		text-align: left;
+	}
 
-/***************************
-			 Fan Mail
-****************************/
+	/***************************
+				 Fan Mail
+	****************************/
 
-a:link[href*="mailbox/mails"],
-a:visited[href*="mailbox/mails"] {
-	color: white;
-	text-underline-position: none;
-	border-bottom: dotted 1.5px;
-}
+	a:link[href*="mailbox/mails"],
+	a:visited[href*="mailbox/mails"] {
+		color: white;
+		text-underline-position: none;
+		border-bottom: dotted 1.5px;
+	}
 
-.mailbox {
-	font-size: 1.7rem;
-}
+	.mailbox {
+		font-size: 1.7rem;
+	}
 
-.mailbox h3 {
-	color: rgba(255, 255, 255, 0.98);
-	text-shadow:	3px 0 0 #272727, -3px 0 0 #272727,
+	.mailbox h3 {
+		color: rgba(255, 255, 255, 0.98);
+		text-shadow:3px 0 0 #272727, -3px 0 0 #272727,
 					0 3px 0 #272727, 0 -3px 0 #272727,
 					2px 2px #6100ad, -2px -2px 0 #6100ad,
 					2px -2px 0 #6100ad, -2px 2px 0 #6100ad;
-	font-size: 3rem;
-	margin-bottom: 15px;
-}
+		font-size: 3rem;
+		margin-bottom: 15px;
+	}
 
-ul > li, 
-#mails {
-	margin-bottom: 10px;
-}
+	ul > li, 
+	#mails {
+		margin-bottom: 10px;
+	}
 
-div > h5 {
-	font-size: 3em;
-}
+	div > h5 {
+		font-size: 3em;
+	}
 
-div > h5:after {
-	content: url(../assets/images/UT-App/mail.ico.png);
-}
+	div > h5:after {
+		content: url(../assets/images/UT_App/mail.ico.png);
+	}
 
-.controls {
-	margin-bottom: 6rem;
-}
+	.controls {
+		margin-bottom: 6rem;
+	}
 
-.ctrl { /* Color of the buttons*/
-	width: 25rem;
-	background: #262626;
-}
+	.ctrl { /* Color of the buttons*/
+		width: 25rem;
+		background: #262626;
+	}
 
-button.btn.btn-info.ctrl { /* Reply button */
-	margin-bottom: 23px;
-}
+	button.btn.btn-info.ctrl { /* Reply button */
+		margin-bottom: 23px;
+	}
 
-/***************************
-			 Gallery
-****************************/
+	/***************************
+				 Gallery
+	****************************/
 
-#gPage {
-	background-image: url(../assets/images/UT-App/backSound.gif);
-}
+	#gPage {
+		background-image: url(../assets/images/UT_App/backSound.gif);
+	}
 
-#flickr,
-#tumblr,
-#artist1,
-#artist2 {
-	opacity: .7;
-	img {
-		width: 96%;
-		@include SHADOW(-4px 0px 233px -2px rgba(255,255,255,0.31));
-		@include BORDER-RAD(60px);
-		border: 10px ridge #595959;
+	#flickr,
+	#tumblr,
+	#artist1,
+	#artist2 {
+		opacity: .7;
+		img {
+			width: 96%;
+			@include SHADOW(-4px 0px 233px -2px rgba(255,255,255,0.31));
+			@include BORDER-RAD(60px);
+			border: 10px ridge #595959;
+		}
+	}
+
+	/***************************
+				 MusicBox
+	****************************/
+
+	#musicbox {
+		font-family: '8bitoperator Regular';
+	}
+
+	#musicbox iframe {
+		max-width: 100%;
+	}
+
+	/***************************
+					Footer
+	****************************/
+
+	.footer {
+		margin-top: 2em;
 	}
 }
-
-/***************************
-			 MusicBox
-****************************/
-
-#musicbox {
-	font-family: '8bitoperator Regular';
-}
-
-#musicbox iframe {
-	max-width: 100%;
-}
-
-/***************************
-				Footer
-****************************/
-
-footer {
-	margin-top: 2em;
-}
-

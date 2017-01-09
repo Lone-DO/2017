@@ -34,9 +34,9 @@
 	@include ALIGN-ITEMS(center);
 }
 
-@mixin FLEX-FLOW($dir: row, $wrap: wrap) {
-	-webkit-flex-flow: $dir $wrap;
-	flex-flow: $dir $wrap;
+@mixin FLEX-FLOW($values...) {
+	-webkit-flex-flow: $values;
+	flex-flow: $values;
 }
 
 @mixin JUSTIFY($dir) {

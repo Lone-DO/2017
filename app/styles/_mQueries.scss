@@ -81,8 +81,8 @@
 ****************************/
 
 @media (max-width: 767px) {
-	li { height: 36px; }
 	.aside {
+		li { height: 36px; }
 		li img { display: none; }
 	}
 }
@@ -129,10 +129,6 @@
 		#purchase iframe {
 			width: 500px;
 			height: 320px;
-		}
-
-		.container {
-			width: 95%;
 		}
 
 		#musicbox iframe[src*='podsnack'] {
