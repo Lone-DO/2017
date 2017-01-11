@@ -5,6 +5,10 @@
     <div class="page"><!--AC Page-->    
         {{render "animalcrossing/app"}}
         <div>{{outlet}}</div>
+        {{#if genShowing}}
+            <button {{action 'hideGen'}} class="cancel-button">X</button>
+            {{partial 'animalcrossing/gen/index'}}
+            {{/if}}
         {{#if hintShowing}}
             <button {{action 'hideHint'}} class="cancel-button">X</button>
             {{partial 'animalcrossing/guide'}}
@@ -13,10 +17,8 @@
     <div class="footer"><!--AC Footer-->  
         <div id="time"></div>
         <nav>
-            <li>
-                {{#link-to 'animalcrossing.gen'}}
-                    <button {{action 'end'}} class="btn btn-default col-xs-12">Generations</button>
-                    {{/link-to}}
+            <li {{action 'showGen'}}>
+                <button class="btn btn-default col-xs-12">Generations</button>
                 </li>
             <li {{action 'showHint'}}>
                 <button class="btn btn-default col-xs-12">Help!!</button>

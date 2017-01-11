@@ -25,6 +25,7 @@ body {
 .aside {
 	width: 10%;
 	background-color: #222;
+	max-height: 500px;
 	@include BORDER-RAD(20px);
 	border-style: inset;
 	margin: $Gap;
@@ -69,7 +70,7 @@ body {
 .showcase {
 	img[src*="Fav"] {
 		width: 42px;
-		height: 42px;
+		// height: 42px;
 		margin-right: 20px;
 	}
 	p {

@@ -1,7 +1,10 @@
 <div id="app">
     {{#if isStarted}}
         {{partial 'animalcrossing/clock'}}
-    {{else}}    
+        {{#if genShowing}}
+            {{partial 'animalcrossing/gen/index'}}
+            {{/if}}
+    {{else}} 
         <div id="start">
             <a {{action 'start'}}>
                 <img 
