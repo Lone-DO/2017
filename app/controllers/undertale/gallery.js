@@ -6,7 +6,7 @@ export default Ember.Controller.extend({
 		showFlickr: function () {
 			$(function () {
 				// AJAX
-				var flickerAPI = "http://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?",
+				var flickerAPI = "https://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?",
 					opts = {
 						tags: 'undertale',
 						format: "json"
@@ -28,9 +28,9 @@ export default Ember.Controller.extend({
 			//TUMBLR API CALLS
 			// Authenticate via API Key
 				var tumblrAPI = 
-					"http://api.tumblr.com/v2/blog/undertale.tumblr.com/info?api_key=vloc4eXTLszkJIWjma1zAvx9wcYnXTaGS1QdKiTGHR3epAclxP",
+					"https://api.tumblr.com/v2/blog/undertale.tumblr.com/info?api_key=vloc4eXTLszkJIWjma1zAvx9wcYnXTaGS1QdKiTGHR3epAclxP",
 				tumblrPhoto =
-					"http://api.tumblr.com/v2/blog/undertale.tumblr.com/posts/photo?api_key=vloc4eXTLszkJIWjma1zAvx9wcYnXTaGS1QdKiTGHR3epAclxP";
+					"https://api.tumblr.com/v2/blog/undertale.tumblr.com/posts/photo?api_key=vloc4eXTLszkJIWjma1zAvx9wcYnXTaGS1QdKiTGHR3epAclxP";
 				//T-Header
 				$.ajax({
 					url: tumblrAPI,
@@ -62,9 +62,9 @@ export default Ember.Controller.extend({
 			$(function () {
 				//Charadreernurr Tumblr
 				var tumblrAPI = 
-					"http://api.tumblr.com/v2/blog/charadreemurrofficial/info?api_key=vloc4eXTLszkJIWjma1zAvx9wcYnXTaGS1QdKiTGHR3epAclxP",
+					"https://api.tumblr.com/v2/blog/charadreemurrofficial/info?api_key=vloc4eXTLszkJIWjma1zAvx9wcYnXTaGS1QdKiTGHR3epAclxP",
 				tumblrPhoto =
-					"http://api.tumblr.com/v2/blog/charadreemurrofficial/posts/photo?api_key=vloc4eXTLszkJIWjma1zAvx9wcYnXTaGS1QdKiTGHR3epAclxP";
+					"https://api.tumblr.com/v2/blog/charadreemurrofficial/posts/photo?api_key=vloc4eXTLszkJIWjma1zAvx9wcYnXTaGS1QdKiTGHR3epAclxP";
 				$.ajax({
 					url: tumblrAPI,
 					dataType: 'jsonp',
@@ -95,9 +95,9 @@ export default Ember.Controller.extend({
 				//Asgore Mememurr Tumblr
 				// Authenticate via API Key
 				var tumblrAPI = 
-					"http://api.tumblr.com/v2/blog/alexandrevla/info?api_key=vloc4eXTLszkJIWjma1zAvx9wcYnXTaGS1QdKiTGHR3epAclxP",
+					"https://api.tumblr.com/v2/blog/alexandrevla/info?api_key=vloc4eXTLszkJIWjma1zAvx9wcYnXTaGS1QdKiTGHR3epAclxP",
 				tumblrPhoto =
-					"http://api.tumblr.com/v2/blog/alexandrevla/posts/photo?api_key=vloc4eXTLszkJIWjma1zAvx9wcYnXTaGS1QdKiTGHR3epAclxP";
+					"https://api.tumblr.com/v2/blog/alexandrevla/posts/photo?api_key=vloc4eXTLszkJIWjma1zAvx9wcYnXTaGS1QdKiTGHR3epAclxP";
 				$.ajax({
 					url: tumblrAPI,
 					dataType: 'jsonp',
