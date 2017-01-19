@@ -1,7 +1,7 @@
 import Ember from 'ember';
 
 export default Ember.Controller.extend({
-	 actions: {
+    actions: {
 	 	end: function () {
             this.set('isStarted', false);
         },
