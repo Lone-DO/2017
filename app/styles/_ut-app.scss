@@ -25,10 +25,21 @@
 					Header
 	****************************/
 	nav {
-		li {
-			margin-bottom: 10px;
+
+		.nav {
+			a {
+				padding: 5px;
+				li {
+					color: #9d9d9d;
+					margin-bottom: 10px;
+				}
+			}
+			.active li {
+				color: white;
+			}	
 		}
 	}
+
 	.mymenu  {
 		font-size: 1.8rem;
 		text-shadow: 0 1px 0 #ccc,

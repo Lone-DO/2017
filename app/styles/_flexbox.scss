@@ -112,7 +112,7 @@
 
 @media (min-width: 768px) {
 	.main { 
-		@include FLEX(9 0px);
+		@include FLEX(7 0px);
 	}
 	.aside { 
 		order: 1;
@@ -122,11 +122,14 @@
 
 	#UT_App {
 		.mymenu, 
-		.nav,
 		#musicbox {
 			@include FLEXBOX;
 			@include FLEX-FLOW;
 			@include ALIGN-ITEMS(center);
+		}
+
+		.nav {
+			@include FLEX-FLOW(row);
 		}
 
 		.mymenu, 
