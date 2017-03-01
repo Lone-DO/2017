@@ -58,6 +58,8 @@ body {
 	text-align: left;
 	.intro img {
 		width: 100%;
+        //Maintains Screen from stretching...
+        max-width: 900px; 
 	}
 }
 
