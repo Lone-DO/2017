@@ -1,3 +1,12 @@
+# Note
+Due to how GitHub Pages works, the master, default branch is reserved for the Dist files to be hosted, Visit the Live site
+
+## Develper Mode
+Switch to the "devMode" Branch to edit and view Production files
+This is an EmberCLI Application, use "ember serve" in console to launch
+
+Its an absolute must that you verify that you are on the "devMode" Branch to see everything.
+
 # portfolio
 
 This README outlines the details of collaborating on this Ember application.
