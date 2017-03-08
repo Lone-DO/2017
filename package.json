@@ -38,6 +38,7 @@
   },
   "scripts": {
     "build": "ember build",
+    "push": "ember github-pages:commit --branch master --message 'patching to master'",
     "start": "ember server --proxy http://127.0.0.1:8000",
     "test": "ember test"
   },
