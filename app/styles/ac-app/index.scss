@@ -1,1 +1,9 @@
-﻿@import "ac-app";
+﻿/***************************
+	Import AC SCSS
+****************************/
+@import "main.scss";
+@import "clock.scss";
+@import "guide.scss";
+@import "api.scss";
+
+//@import "ac-app";

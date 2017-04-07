@@ -1,2 +1,80 @@
-﻿body {
+﻿/***************************
+           CLOCK
+****************************/
+
+#AC_App {
+    .title {
+		font-size: 2em;
+	}
+
+	.clock {
+			#clockPhase {
+				width: 50%;
+			}
+
+		span {
+			line-height: 50px;
+
+			@include BORDER-RAD($MAX);
+			border: 4px groove $BORDER_COLOR;
+			color: $BORDER_COLOR;
+			text-align: center;
+			padding: 0 10px;
+		}
+
+		i {
+			font-size: 3rem;
+			padding: 0;
+		}
+
+		.radio {
+			position: relative;
+			width: 100%;
+			height: 0;
+			padding-bottom: 51%;
+			#songPhase {
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				left: 0; top: 0;
+			}
+		}
+
+		.btn-danger {
+			margin: $Gap 0;
+		}
+	}
+	.generation {	
+		h1 {
+			font-size: 2rem;
+		}
+
+		.genTitle {
+			font-size: 1.4rem;
+			margin: 5px;
+		}
+
+		article {
+			width: $FIT;
+			display: inline-block;
+			margin-bottom: $Gap;
+			
+			@include BORDER-RAD(0, $Round, $Round, $Round)
+			@include SHADOW(10px, 10px, 43px, 0px, rgba(0,0,0,0.40));
+		}
+	}
+
+	.letter {
+		background-image: url(../assets/images/AC_App/letter_bg.jpg);
+		background-size: 100%;
+
+		h2 {
+			text-decoration: underline;
+			font-size: 2rem;
+		}
+
+		form {
+			font-size: 1.4rem;
+		}
+	}
 }

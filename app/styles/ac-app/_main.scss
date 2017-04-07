@@ -1,0 +1,55 @@
+﻿/***************************
+           MAIN
+****************************/
+
+#AC_App {
+
+    text-align: center;
+	background-image: url(../assets/images/AC_App/light-texture.jpg);
+	line-height: 1.4;
+	color: #784011;
+	font-family: Fink, sans-serif;
+
+    > * {
+		width: $FIT;
+	}
+
+	#banner {
+		width: 75%;
+		margin-top: $Gap;
+	}
+
+	.footer {
+		margin: $Gap 0;
+		p {
+			margin-top: $Gap;
+		}
+	}
+
+	button {
+		font-family: Fink, sans-serif;
+	}
+
+	#start {
+	    max-height: $MAX;
+	    padding: 1em;
+		overflow: hidden;
+	}
+
+	#start img[src*="button"] {
+		width: $MAX;
+	    padding: 1rem;
+	    @include BORDER-RAD(50%);
+	    @include TRANSITION(all 0.3s)
+	}
+
+	#start img[src*="button"]:hover {
+		@include TRANSFORM(1.2);
+	}
+
+	.page {
+		button {
+			width: 100%;
+		}
+	}
+}

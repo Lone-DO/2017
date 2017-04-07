@@ -1,2 +1,86 @@
-﻿body {
+﻿/***************************
+           API
+****************************/
+
+#AC_App {
+    .delete-link {
+	  	font-size: x-small;
+	}
+
+	.blog-post {
+		@include SHADOW(4px 3px 15px 0px rgba(0,0,0,0.75));
+		@include BORDER-RAD(5px);
+		width: 100%;
+		margin-top: 20px;
+		margin-bottom: 20px;
+		background: white;
+	  	border: 1px solid lightsteelblue;
+	  	
+	  	padding: 0 5px;
+
+		h3 {
+			margin-top: $Gap;
+			font-weight: bold;
+		}
+
+		h6 {
+			font-style: italic;
+			color: lightgrey;
+		}
+
+		p {
+			margin: 8px 0;
+		}
+
+		img{
+			width: $FIT;
+		}
+	}
+
+	.bigass-button {
+		position: relative;
+		width: 10rem;
+		height: 60px;
+		padding: 0;
+		font-size: 22px;
+		color: white;
+		text-align: center;
+		text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+		border: 0;
+		cursor: pointer;
+	}
+
+	.action-button {
+		@extend .bigass-button;
+		margin: 20px 0;
+		background: #3498db;
+		border-bottom: 2px solid #2a8bcc;
+		@include SHADOW(inset 0 -2px #2a8bcc);
+	}
+
+	.link-button {
+		@extend .action-button;
+		background-image: url('../assets/images/AC_App/right-arrow-white.png');
+		background-position: right;
+		background-repeat: no-repeat;
+	}
+
+	.cancel-button {
+		@extend .bigass-button;
+		margin: 20px 0;
+		background: #9CA1A5;
+		border-bottom: 2px solid #6A6C6D;
+		@include SHADOW(inset 0 -2px #6A6C6D);
+	}
+
+	.post-form {
+		display: block;
+		padding-right: 13px;
+
+		.post-field {
+			font-size: 1rem;
+			width: $MAX;
+			margin: 5px;
+		}
+	}
 }
