@@ -1,0 +1,22 @@
+﻿/***************************
+			GALLERY
+****************************/
+
+#UT_App {
+    #gPage {
+		background-image: url(../assets/images/UT_App/backSound.gif);
+	}
+
+	#flickr,
+	#tumblr,
+	#artist1,
+	#artist2 {
+		opacity: .7;
+		img {
+			width: 96%;
+			@include SHADOW(-4px 0px 233px -2px rgba(255,255,255,0.31));
+			@include BORDER-RAD(60px);
+			border: 10px ridge #595959;
+		}
+	}
+}

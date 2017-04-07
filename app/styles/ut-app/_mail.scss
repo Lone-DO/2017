@@ -1,0 +1,52 @@
+﻿/***************************
+			MAIL
+****************************/
+
+#UT_App {
+    a:link[href*="mailbox/mails"],
+	a:visited[href*="mailbox/mails"] {
+		color: white;
+		text-underline-position: none;
+		border-bottom: dotted 1.5px;
+	}
+
+	.mailbox {
+		font-size: 1.7rem;
+	}
+
+	.mailbox h3 {
+		color: rgba(255, 255, 255, 0.98);
+		text-shadow:3px 0 0 #272727, -3px 0 0 #272727,
+					0 3px 0 #272727, 0 -3px 0 #272727,
+					2px 2px #6100ad, -2px -2px 0 #6100ad,
+					2px -2px 0 #6100ad, -2px 2px 0 #6100ad;
+		font-size: 3rem;
+		margin-bottom: 15px;
+	}
+
+	ul > li, 
+	#mails {
+		margin-bottom: 10px;
+	}
+
+	div > h5 {
+		font-size: 3em;
+	}
+
+	div > h5:after {
+		content: url(../assets/images/UT_App/mail.ico.png);
+	}
+
+	.controls {
+		margin-bottom: 6rem;
+	}
+
+	.ctrl { /* Color of the buttons*/
+		width: 25rem;
+		background: #262626;
+	}
+
+	button.btn.btn-info.ctrl { /* Reply button */
+		margin-bottom: 23px;
+	}
+}

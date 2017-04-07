@@ -1,0 +1,36 @@
+﻿/***************************
+			CONTACT
+****************************/
+
+#UT_App {
+    .contact {
+		font-size: 2.4rem;
+	}
+
+	img[src*="fix"] {
+		width: 70%;
+		min-height: 6em;
+	}
+
+	div#c-piece-email p {
+		width: 531px;
+		margin-bottom: 2em;
+	}
+
+	div#c-piece-1 p,
+	div#c-piece-email,
+	div#c-piece-email p {
+		width: 80%;
+		margin-left: auto;
+		margin-right: auto;
+		text-align: center;
+	}
+
+	#backToFront p {
+		color: yellow;
+	}
+
+	#c-piece-unrelated a {
+		color: #03abfe;
+	}
+}

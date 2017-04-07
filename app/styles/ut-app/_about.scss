@@ -1,0 +1,39 @@
+﻿/***************************
+			About
+****************************/
+
+#UT_App {
+    #about {
+		font-size: 2rem;
+		letter-spacing: 3px;
+		word-spacing: 1px;
+		
+	}
+
+	img[src*="xscreen"],
+	img[src*="logo"] {
+		width: 100%;
+		margin-bottom: 1.7rem;
+		margin-top: 1.7rem;
+	}
+
+	#xscr5 span {
+		padding-top: 50%;
+		word-spacing: -1px;
+		color: grey;
+		font-size: 1.3rem;
+	}
+
+	#xscr12 p {
+		margin-bottom: 9.6rem;
+	}
+
+	#xscr12-end {
+		margin-top: 27em;
+	}
+
+	#laugh {
+		font-size: 2rem;
+		letter-spacing: -.6px;
+	}
+}

@@ -1,0 +1,30 @@
+﻿/***************************
+			DEMO
+****************************/
+
+#UT_App {
+    .demo {
+		width: 80%;
+		margin: auto;
+	}
+
+	img[src*="demo"] {
+		width: 70%;
+	}
+
+	img[src*="demo_a"] {
+		width: 100%;
+	}
+
+	.demo p {
+		letter-spacing: 1px;
+		margin-bottom: 3em;
+		font-size: 2rem;
+	}
+
+	.demo p span {
+		color: grey;
+		text-align: left;
+		font-size: 1.5rem; 
+	}
+}

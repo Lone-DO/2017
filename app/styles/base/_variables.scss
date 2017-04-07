@@ -3,3 +3,21 @@ $MAX: 100%;
 $FIT: 90%;
 $Round: 50px;
 $Gap: 20px;
+
+// Media Query Breakpoints
+/******* 320px > HVGA *******/
+$mq-small : '(max-width: 321px)';
+/******* 640px > DVGA *******/
+$mq-medium : '(min-width: 640px)';
+/******* 768px > XGA *******/
+$mq-large : '(min-width: 768px)';
+/******* 1024px > SXGA *******/
+$mq-xlarge : '(min-width: 1024px)';
+
+/**Example
+    
+    @media #{$mq-small} {
+		display: none;
+	}
+
+    **/

@@ -1,0 +1,29 @@
+﻿/***************************
+			HUB
+****************************/
+
+#UT_App {
+    .trailer {
+		position: relative;
+		width: 100%;
+		height: 0;
+		padding-bottom: 51%;
+		iframe {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			left: 0; top: 0;
+		}
+	}
+
+	img[src*="available"] {
+		width: 100%;
+		max-width: 574px;
+		max-height: 205px;
+	}
+
+	#purchase iframe {
+		min-height: 200px;
+		// min-width: 320px;
+	}
+}
