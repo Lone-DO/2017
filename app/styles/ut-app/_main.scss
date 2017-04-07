@@ -16,4 +16,10 @@
 		border: 0;
 		margin-top: 20px;
 	}
+
+     @media #{$mq-xlarge} {
+		.container {
+			width: 100%;
+		}
+	}
 }

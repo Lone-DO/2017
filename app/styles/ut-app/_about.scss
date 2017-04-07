@@ -8,6 +8,14 @@
 		letter-spacing: 3px;
 		word-spacing: 1px;
 		
+        @media #{$mq-xlarge} {
+		    p {
+			    font-size: 3.5rem;
+		    }
+            li span {
+			    font-size: 2rem;
+		    }
+	    }
 	}
 
 	img[src*="xscreen"],

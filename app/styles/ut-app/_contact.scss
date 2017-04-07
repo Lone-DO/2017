@@ -33,4 +33,11 @@
 	#c-piece-unrelated a {
 		color: #03abfe;
 	}
+
+    @media #{$mq-xlarge} {
+		/*Contact page div adjust*/
+		#c-piece-1 {
+			width: 70%;
+		}
+	}
 }

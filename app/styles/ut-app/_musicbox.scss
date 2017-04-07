@@ -10,4 +10,10 @@
 	#musicbox iframe {
 		max-width: 100%;
 	}
+
+     @media #{$mq-large} {
+		#musicbox iframe[src*='podsnack'] {
+			padding: 0 10px;
+		}
+	}
 }

@@ -8,9 +8,17 @@
 		font-size: 1.58rem;
 		margin-left: 3.58em;
 		margin-bottom: 2em;
+        /*Faq item adjust*/
+        @media #{$mq-xlarge} {
+		    font-size: 2.4rem;
+	    }
 	}
 
 	#faq h1 {
 		text-align: left;
+        /*Faq item adjust*/
+        @media #{$mq-xlarge} {
+		    font-size: 4.5rem;
+	    }
 	}
 }

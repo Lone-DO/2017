@@ -35,6 +35,19 @@
 		img{
 			width: $FIT;
 		}
+
+        @media #{$mq-medium} {
+            font-size: 2.5rem;
+			width: 45rem;
+        }
+
+        @media #{$mq-xlarge} {
+            font-size: 3rem;
+    		width: 20em;
+    		h3 {
+    			font-size: 3rem;
+    		}
+        }
 	}
 
 	.bigass-button {

@@ -12,6 +12,13 @@
 			line-height: 200%;
 			padding: 10px;
 		}
+
+        @media #{$mq-large} {
+		    font-size: 2rem;
+			h3 {
+				font-size: 2em;
+			}
+	    }
 	}
 
 	.rLinks {

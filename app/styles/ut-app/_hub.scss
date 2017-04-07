@@ -25,5 +25,30 @@
 	#purchase iframe {
 		min-height: 200px;
 		// min-width: 320px;
+
+        @media #{$mq-large} {
+            width: 500px;
+			height: 320px;
+        }
+
+        @media #{$mq-xlarge} {
+		    width: 700px;
+			height: 320px;
+	    }
+	}
+
+    @media #{$mq-small} {
+        #hub {
+		    div, #purchase iframe {
+				margin: $Gap 0;
+			}
+		}	
+	}
+
+    @media #{$mq-xlarge} {
+       	iframe[src*='youtube'] {
+			max-width: 600px;
+			height: 300px;
+		}
 	}
 }

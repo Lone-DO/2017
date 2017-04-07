@@ -19,4 +19,17 @@
 			border: 10px ridge #595959;
 		}
 	}
+
+    @media #{$mq-medium} {
+		#tumblr img,
+		#flickr img,
+		#artist1 img,
+		#artist2 img {
+			max-width: 40rem; 
+		}
+
+		#purchase iframe {
+			width: 400px;
+		}
+	}
 }

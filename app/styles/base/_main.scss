@@ -20,6 +20,10 @@
 body {
 	background: black;
 	color: #ffffff;
+
+    @media #{$mq-small} {
+		background: red;
+	}
 }
 
 .aside {
@@ -51,6 +55,22 @@ body {
 		display: block;
 		color: red;
 	}
+
+    @media (max-width: 767px) {
+        li { height: 36px; }
+        li img { display: none; }
+    }
+
+    @media #{$mq-large} {
+		height: 750px;
+		span { display: none; }
+		li:hover {
+			span {
+				display: block;
+				color: red;
+			}
+		}
+	}
 }
 
 .main {
@@ -61,6 +81,39 @@ body {
         //Maintains Screen from stretching...
         max-width: 900px; 
 	}
+
+    @media #{$mq-small} {
+		padding: 10px 0;
+	}
+
+    @media #{$mq-large} {
+		/*navbar background removed no longer needs big gap between items*/ 
+		    //padding-left: $Gap;
+		.content {
+			max-width:95%;
+		    max-height: 700px;
+		    overflow-y: auto;
+		    overflow-x: hidden;
+		    &::-webkit-scrollbar {
+    			width: 1em;
+			}
+			 
+			&::-webkit-scrollbar-track {
+			    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+			}
+			 
+			&::-webkit-scrollbar-thumb {
+			  background-color: darkgrey;
+			  outline: 1px solid slategrey;
+			}
+		}
+	}
+
+    @media #{$mq-xlarge} {
+        .content {
+		    max-height: 900px;
+		}
+    }
 }
 
 .wrapper {
@@ -78,6 +131,13 @@ body {
 	p {
 		text-align: center;
 	}
+
+    @media (max-width: 340px){
+	//Fixes wierd issue with image breaking wierd on page
+	    img[src*="Fav"] {
+			max-width: 42px;
+		}
+    }
 }
 
 /***************************
@@ -101,4 +161,16 @@ header {
 
 footer {
 	margin-top: $Gap;
+}
+
+@media #{$mq-large} {
+	.navbar {
+        border: none;
+    }
+
+    .navbar-inverse {
+        /**Hide Background Grey color of inverse 
+            to blend icons with content.**/
+        background: none;
+    }	
 }

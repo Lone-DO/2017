@@ -14,9 +14,19 @@
 		width: $FIT;
 	}
 
+    #app {
+         @media #{$mq-medium} {
+		    width: $FIT;
+	    }
+    }
+
 	#banner {
 		width: 75%;
 		margin-top: $Gap;
+
+        @media #{$mq-large} {
+		    max-width: 300px;   
+	    }
 	}
 
 	.footer {
@@ -40,7 +50,11 @@
 		width: $MAX;
 	    padding: 1rem;
 	    @include BORDER-RAD(50%);
-	    @include TRANSITION(all 0.3s)
+	    @include TRANSITION(all 0.3s);
+
+        @media #{$mq-large} {
+		    max-width: 500px;   
+	    }
 	}
 
 	#start img[src*="button"]:hover {
@@ -50,6 +64,17 @@
 	.page {
 		button {
 			width: 100%;
+		}
+	}
+
+    @media #{$mq-medium} {
+        .btn-danger {
+		    font-size: 1.5rem;
+	    }
+
+		.footer nav .btn,
+		.footer p {
+			font-size: 2.5rem;
 		}
 	}
 }

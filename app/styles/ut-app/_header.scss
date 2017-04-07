@@ -14,7 +14,11 @@
 			}
 			.active li {
 				color: white;
-			}	
+			}
+
+             @media #{$mq-small} {
+		        margin: 0;
+	        }
 		}
 	}
 
@@ -39,4 +43,12 @@
 	#nav_merch a span {
 		font-size: .8em;
 	}
+
+    @media (min-width: 960px) {
+        .mymenu li,
+        .mailbox {
+            margin-right: 10px;
+            font-size: 2.2rem;
+        }
+    }
 }
