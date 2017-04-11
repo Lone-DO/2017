@@ -8,16 +8,19 @@ const Router = Ember.Router.extend({
 
 Router.map(function() {
   this.route('home', {path: '/'});
-  this.route('projects', {path: '/projects'});
+	
+  this.route('projects', {path: '/projects'}, function() {
+		
+	});
+	
+	this.route('animalcrossing', {path: '/actunes'}, function() {
+			this.route('gen', {path: '/gen'}, function() {
+							this.route('create');
+			});
+		});
 
-  this.route('animalcrossing', {path: '/actunes'}, function() {
-    this.route('gen', {path: '/gen'}, function() {
-            this.route('create');
-    });
-  });
-
-  this.route('undertale', {path: '/undertale'}, function() {
-      this.route('hub', {path: '/'});
+		this.route('undertale', {path: '/undertale'}, function() {
+			this.route('hub', {path: '/'});
       this.route('troubleshoot');
       this.route('faq');
       this.route('about');
@@ -34,9 +37,9 @@ Router.map(function() {
       //Gallery for Fan made Art Collections
       this.route('gallery');
       //Musicbox for variety of Undertale Hit tunes
-      this.route('musicbox');
-  });
-
+			this.route('musicbox');
+		});
+	
   this.route('legacy', {path: '/legacy'});
 });
 
