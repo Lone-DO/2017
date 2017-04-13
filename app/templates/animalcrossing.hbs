@@ -7,11 +7,11 @@
         <div>{{outlet}}</div>
         {{#if genShowing}}
             <button {{action 'hideGen'}} class="cancel-button">X</button>
-            {{partial 'animalcrossing/gen/index'}}
+            {{render 'animalcrossing/gen/index'}}
             {{/if}}
         {{#if hintShowing}}
             <button {{action 'hideHint'}} class="cancel-button">X</button>
-            {{partial 'animalcrossing/guide'}}
+            {{render 'animalcrossing/guide'}}
             {{/if}}
         </div>
     <div class="footer"><!--AC Footer-->  

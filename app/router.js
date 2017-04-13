@@ -13,7 +13,7 @@ Router.map(function() {
 		
 	});
 	
-	this.route('animalcrossing', {path: '/actunes'}, function() {
+	this.route('ac-tunes', {path: '/actunes'}, function() {
 			this.route('gen', {path: '/gen'}, function() {
 							this.route('create');
 			});
