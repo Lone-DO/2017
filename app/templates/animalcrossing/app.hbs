@@ -1,17 +1,15 @@
 <div id="app">
     {{#if isStarted}}
         {{partial 'animalcrossing/clock'}}
-        {{#if genShowing}}
-            {{partial 'animalcrossing/gen/index'}}
-            {{/if}}
     {{else}} 
-        <div id="start">
-            <a {{action 'start'}}>
-                <img 
-                    src="../assets/images/AC_App/kk_button_tumblr.png"  
-                    onmouseover="this.src='../assets/images/AC_App/kk_button_tumblr.gif';"
-                    onmouseout="this.src='../assets/images/AC_App/kk_button_tumblr.png';">
-                </a>
-            </div>
+        <!--<div class="app-cover">
+            <img class="img-fluid" src="../assets/images/AC_App/bevel.png" />
+        </div>-->
+        <div id="start" {{action 'start'}}>
+            <img class="img-fluid"
+                    src="../assets/images/AC_App/kk_button.png"
+                    onmouseover="this.src='../assets/images/AC_App/kk_button.gif';"
+                    onmouseout="this.src='../assets/images/AC_App/kk_button.png';">
+        </div>
         {{/if}}
     </div> <!--End of AC App Div-->
