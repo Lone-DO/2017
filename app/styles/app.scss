@@ -48,5 +48,16 @@
 		    left: 0; top: 0;
 	    }
 	}
+
+    .generation {
+        /*width: 95%;
+        margin: auto;*/
+        margin: 0 0;
+        .card {
+            &, button {
+                margin: 10px 0;
+            }
+        }
+    }
     
 }

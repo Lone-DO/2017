@@ -50,74 +50,27 @@ export default Ember.Controller.extend({
 								_imgOver = albums[i].imageHover,
 								_imgOut = albums[i].imageOut,
 								Generation = '';
-								
 
-							/***
-                            <div class="row">
-                                <div class="col-md-4">
-                                    <div class="card">
-                                        <img class="card-img-top hidden-xs-down" src="" alt="Card image cap">
-                                        <h5 class="card-header text-center"></h5>
-                                        <div class="card-block">
-                                            <button type="button" class="btn btn-primary"></button>
-                                            <p class="card-text">date</p>
-                                            <p class="card-text">console</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            */
-
-							    //Api loop Head/ Opening
+							//Api loop Head/ Opening
 							    Generation += '<div class="col-md-4">';
 							    Generation += '<div class="card">';
-								
-							    //Api loop for img data
+							//Api loop for img data
 							    Generation += '<a class="set' + t + '">';
 							    Generation += '<img class="card-img-top hidden-xs-down" src="' + _imgOut + '" ';
 							    Generation += 'onmouseover="this.src=' + "'" + _imgOver + "';" + '" ';
 							    Generation += 'onmouseout="this.src=' + "'" + _imgOut + "';" + '" ';
 							    Generation += '></a>';
-								
-							    //Aoi loop for descriptions
+							//Api loop for card-header
 							    Generation += '<h5 class="card-header text-center genTitle">' + _name + '</h5>';
 							    Generation += '<div class="card-block">';
-								
-							    //Api Loop for play button	
-							    Generation += '<button type="button" class="btn btn-link set' + t + '">';
+							//Api Loop for play button	
+							    Generation += '<button type="button" class="btn btn-secondary set' + t + '">';
 							    Generation += 'Play This' + '</button>';
-								
+							//Api loop for descriptions	
 							    Generation += '<p class="card-text platform">' + _release + '</p>';
 							    Generation += '<p class="card-text platform">' + _platform + '</p>';
-								
-							    //Api loop closing
+							//Api loop closing
 							    Generation += '</div></div></div>';
-
-							////Api loop Head/ Opening
-							//	Generation += '<div>';
-							//	Generation += '<article><a>';
-								
-							////Api loop for img data
-							//	Generation += '<a class="set' + t + '">';
-							//	Generation += '<img src="' + _imgOut + '" ';
-							//	Generation += 'onmouseover="this.src=' + "'" + _imgOver + "';" + '" ';
-							//	Generation += 'onmouseout="this.src=' + "'" + _imgOut + "';" + '" ';
-							//	Generation += '></a>';
-								
-							////Aoi loop for descriptions
-							//	Generation += '<dd class="date">' + _release + '</dd>';
-							//	Generation += '<dd class="genTitle">' + _name + '</dd>';
-								
-							////Api Loop for play button	
-							//	Generation += '<button class="btn btn-link set' + t + '">';
-							//	Generation += 'Play This' + '</button>';
-								
-							//	Generation += '<dd class="platform">' + _platform + '</dd>';
-								
-								
-							////Api loop closing
-							//	Generation += '</a></article></div>';
-								
 							//Posting Api data
 								$('.generation').append(Generation);
 							}
