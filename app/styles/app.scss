@@ -31,7 +31,14 @@
         padding: 10px 0;
     }
 
+    .v-center {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
     .clockTime {
+        font-size: 1.5rem;
         padding-bottom: 10px;
     }
 
@@ -48,6 +55,14 @@
 		    left: 0; top: 0;
 	    }
 	}
+
+    .footer button{
+        margin-bottom: 20px;
+    }
+
+    #guide {
+        margin-top: 20px;
+    }
 
     .generation {
         /*width: 95%;
