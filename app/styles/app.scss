@@ -6,12 +6,27 @@
 @import "base/_variables.scss";
 @import "base/_mixins.scss";
 
+.card-block .btn img {
+    width: 50px;
+}
+
+.nav-item img {
+    width: 20px;
+    display: block;
+    margin: auto;
+}
+
 #AC_App {
     color: #784011;
 	font-family: Fink, sans-serif;
     text-align: center;
 	background-image: url(../assets/images/AC_App/light-texture.jpg);
     padding-bottom: 1rem;
+
+    .card-block button {
+        padding: 0;
+    }
+
     #banner, #start {
         padding: 0 10px;
     }

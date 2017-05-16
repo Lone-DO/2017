@@ -52,11 +52,11 @@ export default Ember.Controller.extend({
 								Generation = '';
 
 							//Api loop Head/ Opening
-							    Generation += '<div class="col-md-4">';
+								Generation += '<div class="col-md col-lg-4">';
 							    Generation += '<div class="card">';
 							//Api loop for img data
 							    Generation += '<a class="set' + t + '">';
-							    Generation += '<img class="card-img-top hidden-xs-down" src="' + _imgOut + '" ';
+							    Generation += '<img class="card-img-top img-fluid hidden-xs-down" src="' + _imgOut + '" ';
 							    Generation += 'onmouseover="this.src=' + "'" + _imgOver + "';" + '" ';
 							    Generation += 'onmouseout="this.src=' + "'" + _imgOut + "';" + '" ';
 							    Generation += '></a>';

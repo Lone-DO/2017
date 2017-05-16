@@ -9,15 +9,19 @@
     <div class="footer pt-3"><!--AC Footer-->  
         <div id="time"></div>
         {{#if genShowing}}
-            <button class="btn btn-default col-sm-4 disabled">Generations</button>
-            <button {{action 'hideGen'}} class="cancel-button">X</button>
+            <div class="v-center">
+                <button class="btn btn-default col-sm-4 disabled">Generations</button>
+                <button {{action 'hideGen'}} class="btn cancel-button">X</button>
+            </div>
             {{render 'animalcrossing/gen/index'}}
         {{else}}
             <button {{action 'showGen'}} class="btn btn-default col-sm-5">Generations</button>
             {{/if}}
         {{#if hintShowing}}
-            <button class="btn btn-default col-sm-4 disabled">Manual</button>
-            <button {{action 'hideHint'}} class="btn cancel-button">X</button>
+            <div class="v-center">
+                <button class="btn btn-default col-sm-4 disabled">Manual</button>
+                <button {{action 'hideHint'}} class="btn cancel-button">X</button>
+            </div>
             {{render 'animalcrossing/guide'}}
         {{else}}
             <button {{action 'showHint'}} class="btn btn-default col-sm-5">Manual</button>
