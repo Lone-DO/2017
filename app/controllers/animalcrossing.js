@@ -38,7 +38,7 @@ export default Ember.Controller.extend({
                                     Collection += '<h3>' + _name + '</h3>';
                                     Collection += '<p>' + _release + '</p>';
                                     Collection += '<p>' + _platform + '</p>';
-                                    Collection += '<img src="' + _img + '"">';
+                                    Collection += '<img class="img-fluid" src="' + _img + '">';
                                 Collection += '</div>';
                                 Collection += '<div>';
                                     Collection += '<ul>';
