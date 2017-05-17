@@ -50,32 +50,27 @@ export default Ember.Controller.extend({
 								_imgOver = albums[i].imageHover,
 								_imgOut = albums[i].imageOut,
 								Generation = '';
-								
+
 							//Api loop Head/ Opening
-								Generation += '<div>';
-								Generation += '<article><a>';
-								
+								Generation += '<div class="col-md col-lg-4">';
+							    Generation += '<div class="card">';
 							//Api loop for img data
-								Generation += '<a class="set' + t + '">';
-								Generation += '<img src="' + _imgOut + '" ';
-								Generation += 'onmouseover="this.src=' + "'" + _imgOver + "';" + '" ';
-								Generation += 'onmouseout="this.src=' + "'" + _imgOut + "';" + '" ';
-								Generation += '></a>';
-								
-							//Aoi loop for descriptions
-								Generation += '<dd class="date">' + _release + '</dd>';
-								Generation += '<dd class="genTitle">' + _name + '</dd>';
-								
+							    Generation += '<a class="set' + t + '">';
+							    Generation += '<img class="card-img-top img-fluid hidden-xs-down" src="' + _imgOut + '" ';
+							    Generation += 'onmouseover="this.src=' + "'" + _imgOver + "';" + '" ';
+							    Generation += 'onmouseout="this.src=' + "'" + _imgOut + "';" + '" ';
+							    Generation += '></a>';
+							//Api loop for card-header
+							    Generation += '<h5 class="card-header text-center genTitle">' + _name + '</h5>';
+							    Generation += '<div class="card-block">';
 							//Api Loop for play button	
-								Generation += '<button class="btn btn-link set' + t + '">';
-								Generation += 'Play This' + '</button>';
-								
-								Generation += '<dd class="platform">' + _platform + '</dd>';
-								
-								
+							    Generation += '<button type="button" class="btn btn-secondary set' + t + '">';
+							    Generation += 'Play This' + '</button>';
+							//Api loop for descriptions	
+							    Generation += '<p class="card-text platform">' + _release + '</p>';
+							    Generation += '<p class="card-text platform">' + _platform + '</p>';
 							//Api loop closing
-								Generation += '</a></article></div>';
-								
+							    Generation += '</div></div></div>';
 							//Posting Api data
 								$('.generation').append(Generation);
 							}

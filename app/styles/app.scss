@@ -1,3 +1,93 @@
-@import "base/index.scss";
+/*@import "base/index.scss";
 @import "ac-app/index.scss";
-@import "ut-app/index.scss";
+@import "ut-app/index.scss";*/
+
+@import "base/_fonts.scss";
+@import "base/_variables.scss";
+@import "base/_mixins.scss";
+
+.card-block .btn img {
+    width: 50px;
+}
+
+.nav-item img {
+    width: 20px;
+    display: block;
+    margin: auto;
+}
+
+#AC_App {
+    color: #784011;
+	font-family: Fink, sans-serif;
+    text-align: center;
+	background-image: url(../assets/images/AC_App/light-texture.jpg);
+    padding-bottom: 1rem;
+
+    .card-block button {
+        padding: 0;
+    }
+
+    #banner, #start {
+        padding: 0 10px;
+    }
+    #start {
+        padding: 0 20px;
+        img {
+            transition: transform .3s;
+            transform: scale(.8);
+        }
+        
+        &:hover img {
+            transform: scale(1);
+        }
+    }
+
+    #clockPhase {
+        padding: 10px 0;
+    }
+
+    .v-center {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .clockTime {
+        font-size: 1.5rem;
+        padding-bottom: 10px;
+    }
+
+    .radio {
+	    position: relative;
+	    width: 100%;
+	    height: 0;
+	    padding-bottom: 51%;
+        margin-bottom: 15px;
+	    #songPhase {
+		    position: absolute;
+		    width: 100%;
+		    height: 100%;
+		    left: 0; top: 0;
+	    }
+	}
+
+    .footer button{
+        margin-bottom: 20px;
+    }
+
+    #guide {
+        margin-top: 20px;
+    }
+
+    .generation {
+        /*width: 95%;
+        margin: auto;*/
+        margin: 0 0;
+        .card {
+            &, button {
+                margin: 10px 0;
+            }
+        }
+    }
+    
+}

@@ -1,8 +1,11 @@
 import Ember from 'ember';
 
-export default Ember.Controller.extend({
+export default Ember.Component.extend({
     actions: {
-	 	end: function () {
+        hello : function() {
+            alert("Hello World!");
+        },
+        end: function () {
             this.set('isStarted', false);
         },
         showHint: function () {
@@ -21,9 +24,9 @@ export default Ember.Controller.extend({
                     success: function (data) {
                         var albums = data;
                         
-                    //Api Each Loop, sets classes and displays to page
+                        //Api Each Loop, sets classes and displays to page
                         for (var _i = albums.length - 1; _i >= 0; _i--) {
-                        //Api data storing
+                            //Api data storing
                             var _name = albums[_i].title,
                                 _release = albums[_i].date,
                                 _platform = albums[_i].platform,
@@ -34,25 +37,25 @@ export default Ember.Controller.extend({
                             //Api loop Head/ Opening
                             Collection += '<div class="blog-post">';
                             //Api Album Model
-                                Collection += '<div>';
-                                    Collection += '<h3>' + _name + '</h3>';
-                                    Collection += '<p>' + _release + '</p>';
-                                    Collection += '<p>' + _platform + '</p>';
-                                    Collection += '<img class="img-fluid" src="' + _img + '">';
-                                Collection += '</div>';
-                                Collection += '<div>';
-                                    Collection += '<ul>';
+                            Collection += '<div>';
+                            Collection += '<h3>' + _name + '</h3>';
+                            Collection += '<p>' + _release + '</p>';
+                            Collection += '<p>' + _platform + '</p>';
+                            Collection += '<img class="img-fluid" src="' + _img + '"">';
+                            Collection += '</div>';
+                            Collection += '<div>';
+                            Collection += '<ul>';
 
-                                    for (var h = _hourID.length - 1; h >= 0; h--) {
-                                        var _hour = _hourID[h],
-                                            list = '<li>' + _hour + '</li>';
-                                        Collection += list;
-                                    }
+                            for (var h = _hourID.length - 1; h >= 0; h--) {
+                                var _hour = _hourID[h],
+                                    list = '<li>' + _hour + '</li>';
+                                Collection += list;
+                            }
 
-                                    Collection += '</ul>';
-                                Collection += '</div>';
+                            Collection += '</ul>';
+                            Collection += '</div>';
                             //Api loop closing
-                                Collection += '</div>';
+                            Collection += '</div>';
                             //Posting Api data
                             $('#gens').append(Collection);
                         }

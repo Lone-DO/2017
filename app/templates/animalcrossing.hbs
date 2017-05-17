@@ -1,28 +1,30 @@
-<div id="AC_App">
-    <div class="header"><!--AC Header-->  
-        <img id="banner" src="../assets/images/AC_App/Animal_Crossing_Logo.png">
+<div id="AC_App" class="text-center">
+    <div class="header pt-3"><!--AC Header-->  
+        <img id="banner" class="img-fluid" src="../assets/images/AC_App/Animal_Crossing_Logo.png">
         </div>
-    <div class="page"><!--AC Page-->    
+    <div class="page pt-3"><!--AC Page-->    
         {{render "animalcrossing/app"}}
         <div>{{outlet}}</div>
+        </div>
+    <div class="footer pt-3"><!--AC Footer-->  
+        <div id="time"></div>
         {{#if genShowing}}
-            <button {{action 'hideGen'}} class="cancel-button">X</button>
-            {{partial 'animalcrossing/gen/index'}}
+            <div class="v-center">
+                <button class="btn btn-default col-sm-4 disabled">Generations</button>
+                <button {{action 'hideGen'}} class="btn cancel-button">X</button>
+            </div>
+            {{render 'animalcrossing/gen/index'}}
+        {{else}}
+            <button {{action 'showGen'}} class="btn btn-default col-sm-5">Generations</button>
             {{/if}}
         {{#if hintShowing}}
-            <button {{action 'hideHint'}} class="cancel-button">X</button>
-            {{partial 'animalcrossing/guide'}}
+            <div class="v-center">
+                <button class="btn btn-default col-sm-4 disabled">Manual</button>
+                <button {{action 'hideHint'}} class="btn cancel-button">X</button>
+            </div>
+            {{render 'animalcrossing/guide'}}
+        {{else}}
+            <button {{action 'showHint'}} class="btn btn-default col-sm-5">Manual</button>
             {{/if}}
-        </div>
-    <div class="footer"><!--AC Footer-->  
-        <div id="time"></div>
-        <nav>
-            <li {{action 'showGen'}}>
-                <button class="btn btn-default col-xs-12">Generations</button>
-                </li>
-            <li {{action 'showHint'}}>
-                <button class="btn btn-default col-xs-12">Help!!</button>
-                </li>
-            </nav>
         </div>
     </div>
