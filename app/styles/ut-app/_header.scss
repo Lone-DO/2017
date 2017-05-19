@@ -23,7 +23,7 @@
 	}
 
 	.mymenu  {
-		font-size: 1.8rem;
+		font-size: 1.3rem;
 		text-shadow: 0 1px 0 #ccc,
 					 0 6px 1px rgba(0,0,0,.1),
 					 0 0 5px rgba(0,0,0,.1),
@@ -32,6 +32,11 @@
 					 0 5px 10px rgba(0,0,0,.25),
 					 0 10px 10px rgba(0,0,0,.2),
 					 0 20px 20px rgba(0,0,0,.15);
+         /*background-color: #222;*/
+        
+         .navbar-nav {
+            margin: 0 auto;
+         }
 	}
 
 	#nav_merch,
@@ -48,7 +53,7 @@
         .mymenu li,
         .mailbox {
             margin-right: 10px;
-            font-size: 2.2rem;
+            /*font-size: 2.2rem;*/
         }
     }
 }

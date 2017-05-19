@@ -1,45 +1,57 @@
 <div id="UT_App">
-	<div class="header"><!--Top of Site-->
+    <div class="header text-center"><!--Top of Site-->
 		{{#link-to 'undertale'}}
-			<img id="logo" src="../assets/images/UT_App/undertale_logo.png">
-			{{/link-to}}
-		<nav class="navbar navbar-inverse mymenu" role="navigation">
-			<ul class="nav navbar-nav">
-				{{#link-to 'undertale.about'}}
-					<li>ABOUT</li> 
-					{{/link-to}}
-				{{#link-to 'undertale.demo'}}
-					<li>DEMO</li>
-					{{/link-to}}
-				<a href="http://www.fangamer.com/collections/undertale">
-					<li id="nav_merch">MERCH<br>
-						<span>new!</span>
-						</li>
-					</a>
-				{{#link-to 'undertale.contact'}}
-					<li>CONTACT</li>
-					{{/link-to}}
-				{{#link-to 'undertale.faq'}}
-					<li>FAQ!</li>
-					{{/link-to}}
-				{{!-- {{#link-to 'undertale.mailbox'}}
-					<li class="mail">
-						<img src="../assets/images/UT_App/mail-closed.ico">
-						</li>
-					{{/link-to}} --}} <!--temporarily removed till Adapter Fixed-->
-				{{#link-to 'undertale.gallery'}}
-					<li>Gallery</li>
-					{{/link-to}}
-				{{#link-to 'undertale.musicbox'}}
-					<li>♫Musicbox♫</li>
-					{{/link-to}}
-				</ul>
-			</nav>
+			<img id="logo" class="img-fluid hidden-sm-down" src="../assets/images/UT_App/undertale_logo.png">
+		{{/link-to}}
+        <nav class="navbar navbar-inverse mymenu navbar-toggleable-sm"  role="navigation">
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#UTnavbarNav" aria-controls="UTnavbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            {{#link-to 'undertale' class="navbar-brand"}}
+                <img id="logo" class="img-fluid hidden-md-up" src="../assets/images/UT_App/undertale_logo.png">
+            {{/link-to}}
+            <div class="collapse navbar-collapse" id="UTnavbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        {{#link-to 'undertale.about' class="nav-link"}} ABOUT {{/link-to}}
+                    </li>
+                    <li class="nav-item">
+                        {{#link-to 'undertale.demo' class="nav-link"}} DEMO {{/link-to}}
+                    </li>
+                    <li class="nav-item" id="nav_merch">
+                        <a class="nav-link" href="http://www.fangamer.com/collections/undertale">
+                            MERCH<br />
+                            <span>new!</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        {{#link-to 'undertale.contact' class="nav-link"}} CONTACT {{/link-to}}
+                    </li>
+                    <li class="nav-item">
+                        {{#link-to 'undertale.faq' class="nav-link"}} FAQ! {{/link-to}}
+                    </li>
+
+                    {{!-- {{#link-to 'undertale.mailbox'}}
+                    <li class="mail nav-item">
+                        <img src="../assets/images/UT_App/mail-closed.ico">
+                        {{/link-to}} --}} <!--temporarily removed till Adapter Fixed-->
+
+                    <li class="nav-item">
+                        {{#link-to 'undertale.gallery' class="nav-link"}} Gallery {{/link-to}}
+                    </li>
+                    <li class="nav-item">
+                        {{#link-to 'undertale.musicbox' class="nav-link"}} ♫Musicbox♫ {{/link-to}}
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+
 		</div>
 	<div class="page"><!--UT Page-->
 		<div>{{outlet}}</div>
 		</div>
-  	<div class="footer"><!--UT Footer-->
+  	<div class="footer text-center"><!--UT Footer-->
 		<nav>
 			<ul>
 				{{#link-to 'undertale.troubleshoot'}}
