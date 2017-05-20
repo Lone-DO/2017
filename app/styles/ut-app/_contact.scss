@@ -4,7 +4,9 @@
 
 #UT_App {
     .contact {
-		font-size: 2.4rem;
+        @media #{$mq-medium} {
+            font-size: 2.3rem;
+        }
 	}
 
 	img[src*="fix"] {
@@ -12,19 +14,23 @@
 		min-height: 6em;
 	}
 
-	div#c-piece-email p {
-		width: 531px;
+    #c-piece-email img {
+        width: 80%;
+    }
+
+	#c-piece-email p {
 		margin-bottom: 2em;
 	}
 
-	div#c-piece-1 p,
-	div#c-piece-email,
-	div#c-piece-email p {
+	#c-piece-1 p,
+	#c-piece-email,
+	#c-piece-email p {
 		width: 80%;
-		margin-left: auto;
-		margin-right: auto;
+		margin: auto;
 		text-align: center;
 	}
+
+    
 
 	#backToFront p {
 		color: yellow;

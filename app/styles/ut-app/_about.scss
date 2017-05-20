@@ -4,10 +4,14 @@
 
 #UT_App {
     #about {
-		font-size: 2rem;
+		/*font-size: 1rem;*/
+        padding: 0 10px;
 		letter-spacing: 3px;
 		word-spacing: 1px;
-		
+		@media #{$mq-medium} {
+            font-size: 2rem;
+		}
+
         @media #{$mq-xlarge} {
 		    p {
 			    font-size: 3.5rem;
@@ -26,10 +30,13 @@
 	}
 
 	#xscr5 span {
-		padding-top: 50%;
 		word-spacing: -1px;
 		color: grey;
-		font-size: 1.3rem;
+        font-size: .7rem;
+        @media #{$mq-medium} {
+            font-size: 1.3rem;
+		}
+		
 	}
 
 	#xscr12 p {
@@ -37,11 +44,15 @@
 	}
 
 	#xscr12-end {
-		margin-top: 27em;
+		margin-top: 30em;
 	}
 
 	#laugh {
-		font-size: 2rem;
+		/*font-size: 2rem;*/
+        font-size: 1.1rem;
 		letter-spacing: -.6px;
+        @media #{$mq-medium} {
+            font-size: 2rem;
+        }
 	}
 }

@@ -48,10 +48,10 @@ export default Ember.Controller.extend({
 						$.each(photos, function (i) {
 							var url = photos[i].photos[0].original_size.url,
 								// sum = photos[i].summary,
-								photo = '<ul>';
-							photo += '<li>' + '<a href="' + url + '">';
+								//photo = '<ul>';
+							photo = '<li>' + '<a href="' + url + '">';
 							photo += '<img src="' + url + '"></a></li>';
-							photo += '</ul>';
+							//photo += '</ul>';
 							$('#tumblr').append(photo);
 						});
 					}
@@ -80,10 +80,10 @@ export default Ember.Controller.extend({
 						$.each(photos, function (i) {
 							var url = photos[i].photos[0].original_size.url,
 							// sum = photos[i].summary,
-							photo = '<ul>';
-							photo += '<li>' + '<a href="' + url + '">';
+							//photo = '<ul>';
+							photo = '<li>' + '<a href="' + url + '">';
 							photo += '<img src="' + url + '"></a></li>';
-							photo += '</ul>';
+							//photo += '</ul>';
 							$('#artist1').append(photo);
 						});
 					}
@@ -113,10 +113,10 @@ export default Ember.Controller.extend({
 						$.each(photos, function (i) {
 							var url = photos[i].photos[0].original_size.url,
 							// sum = photos[i].summary,
-							photo = '<ul>';
-							photo += '<li>' + '<a href="' + url + '">';
+							//photo = '<ul>';
+							photo = '<li>' + '<a href="' + url + '">';
 							photo += '<img src="' + url + '"></a></li>';
-							photo += '</ul>';
+							//photo += '</ul>';
 							$('#artist2').append(photo);
 						});
 					}

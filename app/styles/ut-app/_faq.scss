@@ -5,9 +5,14 @@
 #UT_App {
     #faq ul {
 		text-align: left;
-		font-size: 1.58rem;
+		
 		margin-left: 3.58em;
 		margin-bottom: 2em;
+
+        @media #{$mq-medium} {
+		    font-size: 1.58rem;
+	    }
+
         /*Faq item adjust*/
         @media #{$mq-xlarge} {
 		    font-size: 2.4rem;

@@ -5,6 +5,11 @@
 #UT_App {
     #gPage {
 		background-image: url(../assets/images/UT_App/backSound.gif);
+        padding: $Gap 0;
+        .btn {
+            width: 80%;
+            max-width: 300px;
+        }
 	}
 
 	#flickr,
@@ -12,24 +17,23 @@
 	#artist1,
 	#artist2 {
 		opacity: .7;
+        @include FLEXBOX;
+        @include FLEX-CENTER;
+        @include FLEX-FLOW(row wrap);
+        
+
 		img {
-			width: 96%;
+			width: 80%;
+
+            /*  img Glow*/
 			@include SHADOW(-4px 0px 233px -2px rgba(255,255,255,0.31));
+             /* Border Decor*/
 			@include BORDER-RAD(60px);
 			border: 10px ridge #595959;
-		}
-	}
 
-    @media #{$mq-medium} {
-		#tumblr img,
-		#flickr img,
-		#artist1 img,
-		#artist2 img {
-			max-width: 40rem; 
-		}
-
-		#purchase iframe {
-			width: 400px;
+            @media #{$mq-medium} {
+                max-width: 20rem; 
+		    }
 		}
 	}
 }

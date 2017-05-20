@@ -15,8 +15,12 @@
 	iframe {
 		border-style: none;
 		border: 0;
-		margin-top: 20px;
+		margin-top: $Gap;
 	}
+
+    .page {
+        padding: 0 $Gap;
+    }
 
      @media #{$mq-xlarge} {
 		.container {
