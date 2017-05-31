@@ -5,7 +5,7 @@ export default Ember.Controller.extend({
 	actions: {
 		save: function () {
 			'use strict';
-			var reply = this.store.createRecord('reply', {
+			let reply = this.store.createRecord('reply', {
 				text: this.get('text')
 			}),
 			mail = this.get('controllers.mail.model');

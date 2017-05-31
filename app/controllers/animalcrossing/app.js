@@ -14,16 +14,15 @@ export default Ember.Controller.extend({
 		start: function () {
 			'use strict';
 			this.set('isStarted', true);
-			console.log('App Launched');
 			$(function phases() {
-				var lastHr = -1,
+				let lastHr = -1,
 					lastMin = -1,
 					lastSec = -1;
 				
 			//*** Setting up API ***
 				$(function () {
 				// Authenticate via API Key
-					var albumAPI = ('https://api.mlab.com/api/1/databases/lone-do/collections/albums?apiKey=9P6rUGDfq5OxFXag9RZYNkk3U2vF6IT0'),
+					let albumAPI = ('https://api.mlab.com/api/1/databases/lone-do/collections/albums?apiKey=9P6rUGDfq5OxFXag9RZYNkk3U2vF6IT0'),
 						_name = '',
 						_release = '',
 						_platform = '',
@@ -32,74 +31,68 @@ export default Ember.Controller.extend({
 						_imgOut = '',
 						Generation = '';
 					console.log('Api location is ' + albumAPI);
-				//API Launch
+				    //API Launch
 					$.ajax({
 						url: albumAPI,
 						dataType: 'json',
 						success: function (data) {
-							var albums = data;
-							console.log(albums.length);
+                            const albums = data;
 	
-						//Api Each Loop, sets classes and displays to page
-							for (var i = albums.length - 1, t = 0; i >= 0 && t <= albums.length; i--, t++) {
-							//Api data storing
-								_name = albums[i].title,
+						    //Api Each Loop, sets classes and displays to page
+							for (let i = albums.length - 1, t = 0; i >= 0 && t <= albums.length; i--, t++) {
+							    //Api data storing
+							    _name = albums[i].title,
 								_release = albums[i].date,
 								_platform = albums[i].platform,
 								_img = albums[i].imageURL,
 								_imgOver = albums[i].imageHover,
-								_imgOut = albums[i].imageOut,
-								Generation = '';
+								_imgOut = albums[i].imageOut;
 
-							//Api loop Head/ Opening
-								Generation += '<div class="col-md col-lg-4">';
-							    Generation += '<div class="card">';
-							//Api loop for img data
-							    Generation += '<a class="set' + t + '">';
-							    Generation += '<img class="card-img-top img-fluid hidden-xs-down" src="' + _imgOut + '" ';
-							    Generation += 'onmouseover="this.src=' + "'" + _imgOver + "';" + '" ';
-							    Generation += 'onmouseout="this.src=' + "'" + _imgOut + "';" + '" ';
-							    Generation += '></a>';
-							//Api loop for card-header
-							    Generation += '<h5 class="card-header text-center genTitle">' + _name + '</h5>';
-							    Generation += '<div class="card-block">';
-							//Api Loop for play button	
-							    Generation += '<button type="button" class="btn btn-secondary set' + t + '">';
-							    Generation += 'Play This' + '</button>';
-							//Api loop for descriptions	
-							    Generation += '<p class="card-text platform">' + _release + '</p>';
-							    Generation += '<p class="card-text platform">' + _platform + '</p>';
-							//Api loop closing
-							    Generation += '</div></div></div>';
+							    Generation = `
+                                    <div class="col-md col-lg-4">
+							            <div class="card">
+							                <a class="set${t}">
+							                    <img class="card-img-top img-fluid hidden-xs-down" src="${_imgOut}" 
+                                                    onmouseover="this.src='${_imgOver}'" onmouseout="this.src='${_imgOut}'">
+                                            </a>
+							                <h5 class="card-header text-center genTitle">${_name}</h5>
+							                <div class="card-block">
+							                    <button type="button" class="btn btn-secondary set${t}">Play This</button>
+							                    <p class="card-text platform">${_release}</p>
+							                    <p class="card-text platform">${_platform}</p>
+							                </div>
+                                        </div>
+                                    </div>
+                                `;
 							//Posting Api data
 								$('.generation').append(Generation);
 							}
 							
-							var index = albums.length - 1,
+							const banner = document.getElementById('banner'),
+                                img = document.getElementById('clockPhase'),
+								iframe = document.getElementById('songPhase'),
+								// source = "../assets/images/AC_App/Timeline/",
+								source = "https://raw.githubusercontent.com/Lone-DO/lone-do.github.io/ember/public/assets/images/AC_App/Timeline/",
+								vSource = "https://www.youtube.com/embed/",
+                                autoplay = "?autoplay=1",
+								extend = "&loop=1&playlist=",
+                                    index = albums.length - 1,
 								 /**Original/Gamecube**/
 								 _oID = albums[index - 2].hourID,
 								 /**CityFolk**/
 								 _cfID = albums[index - 1].hourID,
 								 /**NewLeaf**/
-								 _nlID = albums[index - 0].hourID,
+								 _nlID = albums[index - 0].hourID;
 
-								 /**Defaults Original playlist**/
-								 _currentGen = _oID, 
+							let _currentGen = _oID, /**Defaults Original playlist**/
 								 /**Dev var for verifying generation has changed**/
 								 pending = '', 
-								 banner = document.getElementById('banner'),
-								 img = document.getElementById('clockPhase'),
-								 iframe = document.getElementById('songPhase'),
-								 // source = "../assets/images/AC_App/Timeline/",
-								 source = "https://raw.githubusercontent.com/Lone-DO/lone-do.github.io/ember/public/assets/images/AC_App/Timeline/",
-								 vSource = "https://www.youtube.com/embed/",
 								 imgTag = "", //Tag for img by hour
 								 currentTime = "",
-								 autoplay = "?autoplay=1",
-								 extend = "&loop=1&playlist=";
-							
+                                 play = "";
+								 
 							setInterval(function () {
-								var date = new Date(),
+								let date = new Date(),
 									hours = date.getHours(),
 									minutes = date.getMinutes(),
 									seconds = date.getSeconds(),
@@ -113,7 +106,7 @@ export default Ember.Controller.extend({
 								if (minutes < 10) {minutes = "0" + minutes; }
 								if (seconds < 10) {seconds = "0" + seconds; }
 
-								var play = function () {
+								play = () => {
 									if (hours < 10) {
 										tagHrs = hours.slice(1);
 										vidTagAm = vSource;
@@ -132,33 +125,10 @@ export default Ember.Controller.extend({
 								
 							//Concatinates time Data & Displays
 								currentTime = hours + ":" + minutes + ":" + seconds;
-								/**Plays NewLeaf**/
-								$('.set0').click(function (){
-									pending = _currentGen;
-									_currentGen = _nlID;
-									play();
-									banner.src = 
-										("../../../assets/images/AC_App/Animal_Crossing_New_Leaf_logo.png");
-								});
-								/**Plays CityFolk**/
-								$('.set1').click(function (){
-									pending = _currentGen;
-									_currentGen = _cfID;
-									play();
-									banner.src = 
-										("../../../assets/images/AC_App/Animal_Crossing_City_Folk_(logo).png");
-								});
-								/**Plays Original**/
-								$('.set2').click(function (){
-									pending = _currentGen;
-									_currentGen = _oID;
-									play();
-									banner.src = ("../../../assets/images/AC_App/Animal_Crossing_Logo.png");
-								});
-
+								
 							//Updating Seconds
 								if (seconds !== lastSec) {
-									for (var i = 6, len = 8;
+									for (let i = 6, len = 8;
 									  i < len; i++) {
 									$('._t' + i).text(currentTime[i]);
 								}  
@@ -167,7 +137,7 @@ export default Ember.Controller.extend({
 
 							//Updating Minutes
 								if (minutes !== lastMin) {
-									for (var i = 3, len = 5;
+									for (let i = 3, len = 5;
 									  i < len; i++) {
 									$('._t' + i).text(currentTime[i]);
 								}  
@@ -176,7 +146,7 @@ export default Ember.Controller.extend({
 								
 							//Updating Hours
 								if (hours !== lastHr) {
-									for (var i = 0, len = 2;
+									for (let i = 0, len = 2;
 									  i < len; i++) {
 									$('._t' + i).text(currentTime[i]);
 								}  
@@ -194,6 +164,31 @@ export default Ember.Controller.extend({
 									lastHr = hours;
 								}//end hour refresh
 							}, 1000);
+							
+						/**Plays NewLeaf**/
+						$('.set0').click(function (){
+							pending = _currentGen;
+							_currentGen = _nlID;
+							play();
+							banner.src = 
+                                ("../../../assets/images/AC_App/Animal_Crossing_New_Leaf_logo.png");
+						});
+						/**Plays CityFolk**/
+						$('.set1').click(function (){
+							pending = _currentGen;
+							_currentGen = _cfID;
+							play();
+							banner.src = 
+                                ("../../../assets/images/AC_App/Animal_Crossing_City_Folk_(logo).png");
+						});
+						/**Plays Original**/
+						$('.set2').click(function (){
+							pending = _currentGen;
+							_currentGen = _oID;
+							play();
+							banner.src = ("../../../assets/images/AC_App/Animal_Crossing_Logo.png");
+						});
+
 						}//End Api.Success
 					});//End Api
 				});

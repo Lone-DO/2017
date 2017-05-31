@@ -4,7 +4,7 @@ export default Ember.Controller.extend({
 	actions: {
 		save: function () {
 			'use strict';
-			var newMail = this.store.createRecord('mail', {
+			let newMail = this.store.createRecord('mail', {
 				user: this.get('user'),
 				text: this.get('text')
 			});

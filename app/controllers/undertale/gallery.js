@@ -6,13 +6,13 @@ export default Ember.Controller.extend({
 		showFlickr: function () {
 			$(function () {
 				// AJAX
-				var flickerAPI = "https://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?",
+				const flickerAPI = "https://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?",
 					opts = {
 						tags: 'undertale',
 						format: "json"
 					};
 				function displayPhotos(data) {
-					var photoHTML = '<ul>';
+					let photoHTML = '<ul>';
 					$.each(data.items, function (i, photo) {
 						photoHTML += '<li>' + '<a href="' + photo.link + '">';
 						photoHTML += '<img src="' + photo.media.m + '"></a></li>';
@@ -27,7 +27,7 @@ export default Ember.Controller.extend({
 			$(function () {
 			//TUMBLR API CALLS
 			// Authenticate via API Key
-				var tumblrAPI = 
+				const tumblrAPI = 
 					"https://api.tumblr.com/v2/blog/undertale.tumblr.com/info?api_key=vloc4eXTLszkJIWjma1zAvx9wcYnXTaGS1QdKiTGHR3epAclxP",
 				tumblrPhoto =
 					"https://api.tumblr.com/v2/blog/undertale.tumblr.com/posts/photo?api_key=vloc4eXTLszkJIWjma1zAvx9wcYnXTaGS1QdKiTGHR3epAclxP";
@@ -44,9 +44,9 @@ export default Ember.Controller.extend({
 					url: tumblrPhoto,
 					dataType: 'jsonp',
 					success: function (data) {
-						var photos = data.response.posts;
+						const photos = data.response.posts;
 						$.each(photos, function (i) {
-							var url = photos[i].photos[0].original_size.url,
+							let url = photos[i].photos[0].original_size.url,
 								// sum = photos[i].summary,
 								//photo = '<ul>';
 							photo = '<li>' + '<a href="' + url + '">';
@@ -61,7 +61,7 @@ export default Ember.Controller.extend({
 		showArtist1: function() {
 			$(function () {
 				//Charadreernurr Tumblr
-				var tumblrAPI = 
+				const tumblrAPI = 
 					"https://api.tumblr.com/v2/blog/charadreemurrofficial/info?api_key=vloc4eXTLszkJIWjma1zAvx9wcYnXTaGS1QdKiTGHR3epAclxP",
 				tumblrPhoto =
 					"https://api.tumblr.com/v2/blog/charadreemurrofficial/posts/photo?api_key=vloc4eXTLszkJIWjma1zAvx9wcYnXTaGS1QdKiTGHR3epAclxP";
@@ -76,9 +76,9 @@ export default Ember.Controller.extend({
 					url: tumblrPhoto,
 					dataType: 'jsonp',
 					success: function (data) {
-						var photos = data.response.posts;
+						const photos = data.response.posts;
 						$.each(photos, function (i) {
-							var url = photos[i].photos[0].original_size.url,
+							let url = photos[i].photos[0].original_size.url,
 							// sum = photos[i].summary,
 							//photo = '<ul>';
 							photo = '<li>' + '<a href="' + url + '">';
@@ -94,7 +94,7 @@ export default Ember.Controller.extend({
 			$(function () {
 				//Asgore Mememurr Tumblr
 				// Authenticate via API Key
-				var tumblrAPI = 
+				const tumblrAPI = 
 					"https://api.tumblr.com/v2/blog/alexandrevla/info?api_key=vloc4eXTLszkJIWjma1zAvx9wcYnXTaGS1QdKiTGHR3epAclxP",
 				tumblrPhoto =
 					"https://api.tumblr.com/v2/blog/alexandrevla/posts/photo?api_key=vloc4eXTLszkJIWjma1zAvx9wcYnXTaGS1QdKiTGHR3epAclxP";
@@ -109,9 +109,9 @@ export default Ember.Controller.extend({
 					url: tumblrPhoto,
 					dataType: 'jsonp',
 					success: function (data) {
-						var photos = data.response.posts;
+						const photos = data.response.posts;
 						$.each(photos, function (i) {
-							var url = photos[i].photos[0].original_size.url,
+							let url = photos[i].photos[0].original_size.url,
 							// sum = photos[i].summary,
 							//photo = '<ul>';
 							photo = '<li>' + '<a href="' + url + '">';

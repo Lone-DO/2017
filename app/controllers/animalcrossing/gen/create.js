@@ -18,7 +18,7 @@ export default Ember.Controller.extend({
 
 	actions: {
 		saveAlbum: function() {
-			var albumData = {
+			const albumData = {
 				labelName: this.get('labelName'),
 				releaseDate: this.get('releaseDate'),
 				platform: this.get('platform'),

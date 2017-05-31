@@ -17,17 +17,17 @@ export default Ember.Component.extend({
         showGen: function () {
             this.set('genShowing', true);
             $(function () {
-                var albumAPI = ('https://api.mlab.com/api/1/databases/lone-do/collections/albums?apiKey=9P6rUGDfq5OxFXag9RZYNkk3U2vF6IT0');
+                const albumAPI = ('https://api.mlab.com/api/1/databases/lone-do/collections/albums?apiKey=9P6rUGDfq5OxFXag9RZYNkk3U2vF6IT0');
                 $.ajax({
                     url: albumAPI,
                     dataType: 'json',
                     success: function (data) {
-                        var albums = data;
+                        const albums = data;
                         
                         //Api Each Loop, sets classes and displays to page
-                        for (var _i = albums.length - 1; _i >= 0; _i--) {
+                        for (let _i = albums.length - 1; _i >= 0; _i--) {
                             //Api data storing
-                            var _name = albums[_i].title,
+                            let _name = albums[_i].title,
                                 _release = albums[_i].date,
                                 _platform = albums[_i].platform,
                                 _img = albums[_i].imageURL,
@@ -46,8 +46,8 @@ export default Ember.Component.extend({
                             Collection += '<div>';
                             Collection += '<ul>';
 
-                            for (var h = _hourID.length - 1; h >= 0; h--) {
-                                var _hour = _hourID[h],
+                            for (let h = _hourID.length - 1; h >= 0; h--) {
+                                let _hour = _hourID[h],
                                     list = '<li>' + _hour + '</li>';
                                 Collection += list;
                             }
