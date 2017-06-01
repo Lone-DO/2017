@@ -3,26 +3,26 @@ import Ember from 'ember';
 
 export default Ember.Controller.extend({
 	actions: {
-		showFlickr: function () {
-			$(function () {
-				// AJAX
-				const flickerAPI = "https://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?",
-					opts = {
-						tags: 'undertale',
-						format: "json"
-					};
-				function displayPhotos(data) {
-					let photoHTML = '<ul>';
-					$.each(data.items, function (i, photo) {
-						photoHTML += '<li>' + '<a href="' + photo.link + '">';
-						photoHTML += '<img src="' + photo.media.m + '"></a></li>';
-					});
-					photoHTML += '</ul>';
-					$('#flickr').append(photoHTML);
-				}
-			$.getJSON(flickerAPI, opts, displayPhotos);
-			}); //End Flickr	
-		},
+		//showFlickr: function () {
+		//	$(function () {
+		//		// AJAX
+		//		const flickerAPI = "https://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?",
+		//			opts = {
+		//				tags: 'undertale',
+		//				format: "json"
+		//			};
+		//		function displayPhotos(data) {
+		//			let photoHTML = '<ul>';
+		//			$.each(data.items, function (i, photo) {
+		//				photoHTML += '<li>' + '<a href="' + photo.link + '">';
+		//				photoHTML += '<img src="' + photo.media.m + '"></a></li>';
+		//			});
+		//			photoHTML += '</ul>';
+		//			$('#flickr').append(photoHTML);
+		//		}
+		//	$.getJSON(flickerAPI, opts, displayPhotos);
+		//	}); //End Flickr	
+		//},
 		showTumblr: function() {
 			$(function () {
 			//TUMBLR API CALLS
@@ -46,12 +46,8 @@ export default Ember.Controller.extend({
 					success: function (data) {
 						const photos = data.response.posts;
 						$.each(photos, function (i) {
-							let url = photos[i].photos[0].original_size.url,
-								// sum = photos[i].summary,
-								//photo = '<ul>';
-							photo = '<li>' + '<a href="' + url + '">';
-							photo += '<img src="' + url + '"></a></li>';
-							//photo += '</ul>';
+						    let url = photos[i].photos[0].original_size.url,
+							photo = `<li><a href="${url}"><img src="${url}"></a></li>`;
 							$('#tumblr').append(photo);
 						});
 					}
@@ -79,11 +75,7 @@ export default Ember.Controller.extend({
 						const photos = data.response.posts;
 						$.each(photos, function (i) {
 							let url = photos[i].photos[0].original_size.url,
-							// sum = photos[i].summary,
-							//photo = '<ul>';
-							photo = '<li>' + '<a href="' + url + '">';
-							photo += '<img src="' + url + '"></a></li>';
-							//photo += '</ul>';
+							photo = `<li><a href="${url}"><img src="${url}"></a></li>`;
 							$('#artist1').append(photo);
 						});
 					}
@@ -112,11 +104,7 @@ export default Ember.Controller.extend({
 						const photos = data.response.posts;
 						$.each(photos, function (i) {
 							let url = photos[i].photos[0].original_size.url,
-							// sum = photos[i].summary,
-							//photo = '<ul>';
-							photo = '<li>' + '<a href="' + url + '">';
-							photo += '<img src="' + url + '"></a></li>';
-							//photo += '</ul>';
+							photo = `<li><a href="${url}"><img src="${url}"></a></li>`;
 							$('#artist2').append(photo);
 						});
 					}
