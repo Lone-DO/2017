@@ -7,8 +7,13 @@
 @import "ut-app/index.scss";
 
 
-.list-group a {
-    background-color:#292b2c!important;
+.list-group {
+     div {
+          background-color:#292b2c!important;
+          span.badge {
+              margin: auto;
+          }
+     }
 }
 
 
