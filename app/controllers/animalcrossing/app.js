@@ -1,4 +1,4 @@
-import Ember from 'ember';
+﻿import Ember from 'ember';
 
 /*global $:false*/
 export default Ember.Controller.extend({
@@ -65,7 +65,7 @@ export default Ember.Controller.extend({
                                     </div>
                                 `;
 							//Posting Api data
-								$('.generation').append(Generation);
+                                $('.generation').append(Generation);
 							}
 							
 							const banner = document.getElementById('banner'),
