@@ -52,7 +52,7 @@ export default Ember.Controller.extend({
         },
         serverUpload: function () {
             $.ajax({
-                'type': 'POST',
+                'type': 'PUT',
                 'url': balletAPI,
                 'contentType': 'application/json',
                 'data': JSON.stringify(ballet),
@@ -67,7 +67,3 @@ export default Ember.Controller.extend({
         }
     }
 });
-
-//setInterval(function () {
-//    console.error($stringed);
-//}, 10000);
