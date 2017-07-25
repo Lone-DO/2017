@@ -4,7 +4,7 @@ let ballet = "",
     $stringed = "",
     balletAPI = "https://api.mlab.com/api/1/databases/lone-do/collections/ballets?apiKey=9P6rUGDfq5OxFXag9RZYNkk3U2vF6IT0",
     serverAPI = "https://7daystodie-servers.com/api/?object=servers&element=voters&key=ie9uc889pv9tq8czt1h44vckjnfq81vp0i&month=current&format=json";
-
+EmberTesting
 export default Ember.Controller.extend({
     actions: {
         serverLog: function () {
@@ -52,7 +52,7 @@ export default Ember.Controller.extend({
         },
         serverUpload: function () {
             $.ajax({
-                'type': 'PUT',
+                'type': 'POST',
                 'url': balletAPI,
                 'contentType': 'application/json',
                 'data': JSON.stringify(ballet),
@@ -67,3 +67,7 @@ export default Ember.Controller.extend({
         }
     }
 });
+
+//setInterval(function () {
+//    console.error($stringed);
+//}, 10000);
