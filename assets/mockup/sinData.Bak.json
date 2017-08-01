@@ -1,0 +1,79 @@
+﻿[
+  {
+    "_id": {
+      "$oid": "5974abfdc2ef1609d4201ae9"
+    },
+    "Jul": {
+      "voters": [
+        {
+          "nickname": "SinisterMind81",
+          "votes": "30"
+        },
+        {
+          "nickname": "anonymous",
+          "votes": "26"
+        },
+        {
+          "nickname": "Rockagie",
+          "votes": "17"
+        },
+        {
+          "nickname": "DogTag",
+          "votes": "15"
+        },
+        {
+          "nickname": "Lone Scholar",
+          "votes": "14"
+        },
+        {
+          "nickname": "Pelicanbones",
+          "votes": "14"
+        },
+        {
+          "nickname": "Ehvolus",
+          "votes": "4"
+        },
+        {
+          "nickname": "unit-737",
+          "votes": "3"
+        },
+        {
+          "nickname": "Silent Abyss",
+          "votes": "3"
+        },
+        {
+          "nickname": "Ghostjohn",
+          "votes": "3"
+        },
+        {
+          "nickname": "shido",
+          "votes": "2"
+        },
+        {
+          "nickname": "A Convicted Melon",
+          "votes": "2"
+        },
+        {
+          "nickname": "Flaming Finger",
+          "votes": "1"
+        },
+        {
+          "nickname": "=rTr= FooTheBoss",
+          "votes": "1"
+        },
+        {
+          "nickname": "Cates",
+          "votes": "1"
+        },
+        {
+          "nickname": "Mayo",
+          "votes": "1"
+        },
+        {
+          "nickname": "TheDarkInstinct",
+          "votes": "1"
+        }
+      ]
+    }
+  }
+]
