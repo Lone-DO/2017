@@ -4,7 +4,7 @@ let ballet = "",
     $stringed = "",
     balletAPI = "https://api.mlab.com/api/1/databases/lone-do/collections/ballets?apiKey=9P6rUGDfq5OxFXag9RZYNkk3U2vF6IT0",
     serverAPI = "https://7daystodie-servers.com/api/?object=servers&element=voters&key=ie9uc889pv9tq8czt1h44vckjnfq81vp0i&month=current&format=json";
-EmberTesting
+
 export default Ember.Controller.extend({
     actions: {
         serverLog: function () {
@@ -26,7 +26,7 @@ export default Ember.Controller.extend({
                             monthName = date.toLocaleString(locale, { month: "long" }), //December
                             n = $('.sinData').length;
 
-                        ballet = { Jul: { "voters": info } };// Compiles data
+                        ballet = { Aug: { "voters": info } };// Compiles data
                         $stringed = JSON.stringify(ballet); // serealizes Array into json string
                        
                         if ($('.sinData').length > 0) { //Wipes the div if already loaded
