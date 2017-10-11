@@ -27,6 +27,13 @@
     margin: auto;
 }
 
+header a {
+  * {
+    color: white;
+    text-decoration: none;
+  }
+}
+
 #AC_App {
     color: #784011;
 	font-family: Fink, sans-serif;
