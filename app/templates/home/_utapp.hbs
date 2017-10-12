@@ -1,0 +1,41 @@
+<div class="col-md-6">
+  <div class="card bg-inverse col-md">
+    <!--<img class="card-img-top hidden-md-down" src="../assets/images/UndertaleFav.png" alt="Card image cap">-->
+    <div class="card-block">
+      <h4 class="card-title">Undertale</h4>
+      <p class="card-text">Recreational Project that restructures the original Site to a more update formality. Built using Ember, my first project I've built as a Developer. Complete overhaul of hands-on coding and features that utilize API information for the user's discretion. Allows fans to post "Mail" on the site for the Undertale Devs to see, and others to respond to. Built with Ember.js, Backend localStorage.</p>
+      <div class="pos-f-t">
+        <div class="collapse" id="UT_App-info">
+          <div class="p-4">
+            <div class="list-group">
+              <div class="list-group-item">
+                <span><strong>Ember</strong>: JavaScript Framework</span>
+              </div>
+              <div class="list-group-item">
+                <span><strong>localStorage</strong> : Ember data for 'Fan Mail' feature, (stand alone version only)</span>
+              </div>
+              <div class="list-group-item">
+                <span><strong>SASS</strong> : Modulated CSS</span>
+              </div>
+              <div class="list-group-item">
+                <span><strong>jQuery</strong> : used with API controls</span>
+              </div>
+              <div class="list-group-item">
+                <span><strong>ES2015</strong> : latest JavaScript practices</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <nav class="navbar navbar-inverse bg-inverse">
+          <button class="btn-outline-info navbar-toggler " type="button" data-toggle="collapse" data-target="#UT_App-info" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span>Essentials &omega;</span>
+          </button>
+        </nav>
+      </div>
+      {{#link-to 'undertale' class="btn btn-primary float-right"}}
+      <img class="hidden-md-down" width="150" src="../assets/images/UndertaleFav.png">
+      <span>Preview</span>
+      {{/link-to}}
+    </div>
+  </div>
+</div>

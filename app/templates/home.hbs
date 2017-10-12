@@ -1,15 +1,11 @@
 <div id="main">
-  <p>
-    Hello from the hidden corners of the internet.
-    My name is Dayshawn, Code Name: Lone
-    Web Developer with focus on Video Games & Web applications
-  </p>
+  {{partial "home/_intro"}}
 </div>
 
-<div id="code">
-  {{partial "projects"}}
+<div id="code" class="hidden-sm-up">
+  {{outlet "projects"}}
 </div>
 
-<div id="info">
+<div id="info"  class="hidden-sm-up">
   {{partial "legacy"}}
 </div>

@@ -1,0 +1,23 @@
+<div class="plugin">
+  <!-- Swiper -->
+  <div class="swiper-container swiper-container-h hidden-sm-down">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">Introduction</div>
+      <div class="swiper-slide">
+        <div class="swiper-container swiper-container-v">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">{{partial "home/_actunes"}}</div>
+            <div class="swiper-slide">{{partial "home/_utapp"}}</div>
+            <div class="swiper-slide">{{partial "home/_sinmodapp"}}</div>
+          </div>
+          <div class="swiper-pagination swiper-pagination-v"></div>
+        </div>
+      </div>
+      <div class="swiper-slide"><div>{{partial "legacy"}}</div></div>
+    </div>
+    <!-- Add Pagination -->
+    <div class="swiper-pagination swiper-pagination-h"></div>
+  </div>
+</div>
+
+  <!-- Initialize Swiper -->
