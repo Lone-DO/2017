@@ -35,6 +35,21 @@ header a {
   }
 }
 
+.content {
+  & > div, .row > div {
+    margin-bottom: 3rem;
+  }
+  #main {
+    text-align: center;
+  }
+  #code {
+    margin-bottom: 0;
+  }
+  .card .btn {
+    margin-bottom: 2rem;
+  }
+}
+
 #AC_App {
     color: #784011;
 	font-family: Fink, sans-serif;
@@ -109,4 +124,8 @@ header a {
         }
     }
     
+}
+
+.modal-backdrop {
+  z-index: 0;
 }
