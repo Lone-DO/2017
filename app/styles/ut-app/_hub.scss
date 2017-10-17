@@ -1,4 +1,4 @@
-﻿/***************************
+/***************************
 			HUB
 ****************************/
 
@@ -26,7 +26,7 @@
 
 	#purchase iframe {
 		min-height: 250px;
-		width: 90%;
+		min-width: 300px;
 
         @media (min-width: 499px) {
             //fix default widget height query

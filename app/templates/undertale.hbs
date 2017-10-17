@@ -1,14 +1,14 @@
 <div id="UT_App">
     <div class="header text-center ut_nav"><!--Top of Site-->
 		{{#link-to 'undertale'}}
-			<img id="logo" class="img-fluid hidden-sm-down" src="../assets/images/UT_App/undertale_logo.png">
+			<img id="logo" class="img-fluid d-none d-md-block" src="../assets/images/UT_App/undertale_logo.png">
 		{{/link-to}}
-        <nav class="navbar navbar-dark mymenu navbar-toggleable-sm"  role="navigation">
+        <nav class="navbar navbar-dark mymenu navbar-toggleable-sm navbar-expand-md"  role="navigation">
             <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#UTnavbarNav" aria-controls="UTnavbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             {{#link-to 'undertale' class="navbar-brand"}}
-                <img id="logo" class="img-fluid hidden-md-up" src="../assets/images/UT_App/undertale_logo.png">
+                <img id="logo" class="img-fluid d-md-none" src="../assets/images/UT_App/undertale_logo.png">
             {{/link-to}}
             <div class="collapse navbar-collapse" id="UTnavbarNav">
                 <ul class="navbar-nav">
