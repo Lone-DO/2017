@@ -1,14 +1,18 @@
-<header class="container-fluid mb-5 bg-dark">
-  {{#link-to 'home' class="nav-link" class="navbar-brand"}}
-    <i>Lone-do&trade;</i>
-  {{/link-to}}
-<!--      <img class="Banner img-fluid" src="../assets/images/scholarBanner.jpg">-->
-    </header>
-<div class="container mx-auto d-block bg-dark">
-    <div class="content">
-        {{outlet}}
-        </div>
-    </div>
-<footer class="container-fluid mt-5 bg-dark">
+<header class="container-fluid mb-5 bg-darker">
+  <nav class="navbar bg-darker">
+    {{#link-to 'home' class="nav-link" class="navbar-brand"}}
+      <i>Lone-do&trade;</i>
+    {{/link-to}}
+    <!--      <img class="Banner img-fluid" src="../assets/images/scholarBanner.jpg">-->
+  </nav>
+</header>
+
+<div class="container mx-auto d-block bg-darker">
+  <div class="content">
+    {{outlet}}
+  </div>
+</div>
+
+<footer class="container-fluid mt-5 bg-darker">
     <img class="Banner mx-auto d-block img-fluid" src="../assets/images/geek_banner.png">
     </footer>
